@@ -307,7 +307,7 @@ StScrollBar StButton#hhandle:focus {
   -boxpointer-gap: 2px;
 }
 
-.popup-menu .popup-menu-content {
+.popup-menu-content {
   border-image: url("background-assets/popup-inside.svg") 9;
   padding: .7em 0;
   color: rgba(255, 255, 255, 0.8);
@@ -565,9 +565,8 @@ StScrollBar StButton#hhandle:focus {
 
 .workspace-close-button {
   background-image: url("widget-assets/close.svg");
-  background-size: 41px 61px;
+  height: 41px;
   width: 41px;
-  height: 61px;
   -cinnamon-close-overlap: 28px;
 }
 
@@ -589,6 +588,14 @@ StScrollBar StButton#hhandle:focus {
   background-image: url("expo-scale-assets/trash.svg");
   height: 100px;
   width: 350px;
+}
+
+.workspace-osd {
+  border-image: url("background-assets/popup.svg") 7;
+  padding: 12px 17px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  font-size: 20pt;
 }
 
 /* ===================================================================
@@ -616,10 +623,9 @@ StScrollBar StButton#hhandle:focus {
 
 .window-close {
   background-image: url("widget-assets/close.svg");
-  background-size: 41px 61px;
+  height: 41px;
   width: 41px;
-  height: 45px;
-  -cinnamon-close-overlap: 24px;
+  -cinnamon-close-overlap: 22px;
 }
 
 /* ===================================================================
@@ -878,7 +884,7 @@ StScrollBar StButton#hhandle:focus {
    ! Run dialog
    ===================================================================*/
 .run-dialog > * {
-  padding: 8px;
+  padding: 6px;
 }
 
 .run-dialog > .modal-dialog-button-box {
@@ -890,16 +896,8 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .run-dialog-error-box {
-  padding: 12px 4px 6px 4px;
-  spacing: 1em;
-  color: #d64937;
-  font-weight: bold;
-}
-
-.run-dialog-error-box StIcon {
-  width: 16px;
-  height: 16px;
-  color: #d64937;
+  padding: 10px 2px 2px 2px;
+  spacing: 5px;
 }
 
 .run-dialog-completion-box {
@@ -929,7 +927,7 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .about-uuid {
-  font-size: 9pt;
+  font-size: 10px;
   color: rgba(255, 255, 255, 0.4);
 }
 
@@ -940,7 +938,7 @@ StScrollBar StButton#hhandle:focus {
 
 .about-version {
   padding-left: 7px;
-  font-size: 9pt;
+  font-size: 10px;
   color: #d64937;
 }
 
@@ -1062,23 +1060,25 @@ StScrollBar StButton#hhandle:focus {
 /* ===================================================================
    ! Calendar
    ===================================================================*/
+.calendar {
+  padding: 0.6em 1.3em;
+  padding-top: .7em;
+  spacing-rows: 2px;
+  spacing-columns: 2px;
+}
+
 .datemenu-date-label {
-  padding: 0.7em 0 0.4em 0;
+  border-image: url("background-assets/dark-bg+padding.svg") 6;
+  padding: 0.6em 0 0.6em 0;
   font-size: 10pt;
   font-weight: bold;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.calendar {
-  padding: 0.8em 1.3em 0.6em 1.3em;
-  spacing-rows: 2px;
-  spacing-columns: 2px;
-}
-
 .calendar-month-label {
   padding-top: 2px;
-  font-size: 9pt;
+  font-size: 8pt;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.4);
 }
@@ -1087,51 +1087,39 @@ StScrollBar StButton#hhandle:focus {
 .calendar-change-month-forward:rtl {
   background-image: url("widget-assets/calendar-arrow-left.svg");
   background-size: 16px;
-  width: 16px;
   height: 16px;
-}
-
-.calendar-change-month-back:hover,
-.calendar-change-month-forward:rtl:hover {
-  background-image: url("widget-assets/calendar-arrow-left-hover.svg");
+  width: 16px;
 }
 
 .calendar-change-month-forward,
 .calendar-change-month-back:rtl {
   background-image: url("widget-assets/calendar-arrow-right.svg");
   background-size: 16px;
-  width: 16px;
   height: 16px;
+  width: 16px;
 }
 
-.calendar-change-month-forward:hover,
-.calendar-change-month-back:rtl:hover {
+.calendar-change-month-back:hover {
+  background-image: url("widget-assets/calendar-arrow-left-hover.svg");
+}
+
+.calendar-change-month-forward:hover {
   background-image: url("widget-assets/calendar-arrow-right-hover.svg");
 }
 
-.calendar-day {
-  /* ! */
-}
-
-.calendar-day-top {
-  /* ! */
-}
-
-.calendar-day-left {
-  /* ! */
-}
-
 .calendar-day-base {
-  font-size: 9pt;
+  font-size: 8pt;
   font-weight: bold;
   text-align: center;
   width: 2.3em;
-  height: 2.5em;
+  height: 2.7em;
 }
 
 .calendar-day-heading {
+  font-size: 9pt;
   color: rgba(255, 255, 255, 0.8);
-  padding: 1.2em 0 0.6em 0;
+  padding-top: 9px;
+  padding-bottom: 6px;
   height: 1.5em;
 }
 
@@ -1161,12 +1149,12 @@ StScrollBar StButton#hhandle:focus {
 
 .calendar-week-number {
   color: rgba(255, 255, 255, 0.4);
-  font-size: 9pt;
+  font-size: 8pt;
   font-weight: normal;
-  width: 1.2em;
   height: 1.6em;
-  padding-top: .7em;
-  padding-right: .6em;
+  width: 1.2em;
+  padding-top: 8px;
+  padding-right: 6px;
 }
 
 /* ===================================================================
@@ -1455,12 +1443,10 @@ StScrollBar StButton#hhandle:focus {
 /* Categories */
 .menu-categories-box {
   padding: 10px 30px;
-  font-weight: bold;
 }
 
 .menu-category-button {
   padding: 7px;
-  color: rgba(255, 255, 255, 0.4);
 }
 
 .menu-category-button-greyed {
@@ -1572,7 +1558,6 @@ StScrollBar StButton#hhandle:focus {
   font-weight: bold;
   spacing: 1em;
   padding: 16px;
-  font-size: 12pt;
   color: rgba(255, 255, 255, 0.8);
   border-image: url("background-assets/popup.svg") 7;
 }
@@ -1582,7 +1567,6 @@ StScrollBar StButton#hhandle:focus {
   padding: 16px;
   color: rgba(255, 255, 255, 0.8);
   border-image: url("background-assets/popup.svg") 10;
-  font-size: 20pt;
 }
 
 .osd-window StIcon {
@@ -1592,29 +1576,6 @@ StScrollBar StButton#hhandle:focus {
 .osd-window .level {
   height: 5px;
   color: #d64937;
-}
-
-.workspace-osd {
-  border-image: url("background-assets/popup.svg") 7;
-  padding: 12px 17px;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: bold;
-  font-size: 18pt;
-}
-
-/* ===================================================================
-   ! Looking Glass OSD
-   ===================================================================*/
-#LookingGlassDialog {
-  border-image: url("background-assets/popup.svg") 7;
-  padding: 14px;
-  font-size: 12pt;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-#LookingGlassDialog *:last-child {
-  color: rgba(255, 255, 255, 0.4);
-  padding-top: .4em;
 }
 
 /* ===================================================================
@@ -1644,6 +1605,7 @@ StScrollBar StButton#hhandle:focus {
    ===================================================================*/
 /* Use to override the '.popup-menu-content' selector. */
 .weather-menu .popup-menu-content {
+  padding-top: 6px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -1677,7 +1639,7 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .weather-current-iconbox {
-  padding: 0.2em 1em 1em 1em;
+  padding: 1em;
 }
 
 .weather-current-icon {
@@ -1952,7 +1914,6 @@ StScrollBar StButton#hhandle:focus {
   padding-top: 8px;
   padding-bottom: 8px;
   color: rgba(255, 255, 255, 0.4);
-  font-weight: bold;
 }
 
 .slingshot .sidebar .button:hover {
@@ -2188,225 +2149,6 @@ StScrollBar StButton#hhandle:focus {
 
 .stopwatch-running * {
   color: white;
-}
-
-/* ===================================================================
-   ! Desktop Capture applet
-   ===================================================================*/
-/* Panel icon */
-StBoxLayout.applet-box.desktop-capture StBin {
-  min-width: 22px;
-}
-
-/* Display of preview image in notifications */
-.screenshot-thumbnail {
-  border-image: url("background-assets/dark-bg.svg") 7;
-  border: 0;
-  padding: 4px;
-}
-
-.screenshot-thumbnail-hover {
-  border-image: url("background-assets/hover.svg") 7;
-}
-
-/* Window capture mode */
-.capture-outline-background {
-  background-color: rgba(214, 73, 55, 0.8);
-}
-
-.capture-outline-frame {
-  border: 0;
-  border-radius: 0;
-}
-
-.capture-outline-frame.desktop {
-  border: none;
-}
-
-/* App icon (window capture mode) */
-.overlay-icon {
-  padding: 5px;
-  border: 0;
-  width: 32px;
-  height: 32px;
-  box-shadow: 0 0 transparent;
-  icon-shadow: white 0 0 0;
-}
-
-.overlay-label-title {
-  padding-top: 5px;
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 0 0 0 transparent;
-  font-weight: bold;
-  text-align: center;
-}
-
-.overlay-label-size {
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 0 0 0 transparent;
-  text-align: center;
-  vertical-align: top;
-  font-family: Droid Sans, Sans-Serif;
-  font-size: 10pt;
-  font-weight: bold;
-  clear: both;
-}
-
-.capture-countdown-timer {
-  border-image: url("background-assets/popup.svg") 7;
-  width: 50px;
-  padding: 14px 12px;
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* Dashed border in area selection */
-.border-h, .border-v {
-  border-image: none;
-  background-color: #000;
-}
-
-.handle {
-  border: 1px solid #000;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.area-selection {
-  background-color: rgba(74, 144, 217, 0.5);
-  border: 1px solid #4a90d9;
-}
-
-/* Desktop overlay */
-.cover {
-  background-color: rgba(0, 0, 0, 0.65);
-}
-
-/* Instructions dialog */
-.instructions-container {
-  border-image: url("background-assets/popup.svg") 7;
-}
-
-.instructions-label-header {
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 0 0 transparent;
-}
-
-.instructions-label-text {
-  color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  font-size: 22px;
-  text-shadow: 0 0 transparent;
-}
-
-.menuitem-detail {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.popup-menu-item:active .menuitem-detail {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-/* ===================================================================
-   ! Color Picker applet
-   ===================================================================*/
-.color-inspector {
-  padding: 6px 10px 10px 10px;
-  border-image: none;
-  border: 0;
-  spacing: 10px;
-}
-
-.color-entry {
-  min-width: 150px;
-}
-
-.color-spectrum {
-  min-width: 14px;
-  min-height: 100px;
-  padding: 0 4px 4px 4px;
-}
-
-.color-gradient {
-  padding: 8px 12px 12px 12px;
-  min-width: 100px;
-  min-height: 100px;
-}
-
-.color-cursor {
-  width: 16px;
-  height: 16px;
-}
-
-.color-palette {
-  padding: 10px 10px;
-  border-image: none;
-}
-
-.color-button .color-button-box {
-  border-radius: 2px;
-  border: 0;
-}
-
-.color-button, .color-button:disabled, .color-button:hover {
-  border-image: none;
-  border: 0;
-}
-
-.icon-button {
-  padding: 2px;
-  border-radius: 0;
-}
-
-.popup-scale-menu-item {
-  border-image: none;
-}
-
-/* ===================================================================
- * ! Window list with app grouping
- *
- * - This applet has no stylesheet; it uses the alt-tab styles
- * - The elements are placed inside ".popup-menu-content"
- * - A combinator is used to isolate the styles
- * ===================================================================*/
-.popup-menu-content {
-  spacing: 0;
-  padding: 0;
-  border-image: url("background-assets/tooltip--window-app-grouping.svg") 6;
-}
-
-.popup-menu-content .switcher-list {
-  spacing: 0;
-  padding: 0;
-  border-image: none;
-}
-
-.popup-menu-content .switcher-list .item-box {
-  padding: 0;
-  spacing: 0;
-  border-image: none;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.popup-menu-content .switcher-list .item-box:selected {
-  border-image: none;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.popup-menu-content .switcher-list .item-box .thumbnail-iconLabel {
-  spacing: 4px;
-  padding: 0;
-  font-size: 9pt;
-}
-
-.popup-menu-content .switcher-list .item-box .window-close {
-  background-image: url("widget-assets/close-2.svg");
-  background-size: 20px;
 }
 
 /* ===================================================================

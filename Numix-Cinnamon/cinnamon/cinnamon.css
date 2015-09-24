@@ -884,7 +884,7 @@ StScrollBar StButton#hhandle:focus {
    ! Run dialog
    ===================================================================*/
 .run-dialog > * {
-  padding: 6px;
+  padding: 8px;
 }
 
 .run-dialog > .modal-dialog-button-box {
@@ -896,8 +896,16 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .run-dialog-error-box {
-  padding: 10px 2px 2px 2px;
-  spacing: 5px;
+  padding: 12px 4px 6px 4px;
+  spacing: 1em;
+  color: #d64937;
+  font-weight: bold;
+}
+
+.run-dialog-error-box StIcon {
+  width: 16px;
+  height: 16px;
+  color: #d64937;
 }
 
 .run-dialog-completion-box {

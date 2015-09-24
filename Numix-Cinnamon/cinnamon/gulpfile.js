@@ -1,95 +1,70 @@
-var gulp        = require("gulp"),
-    plumber     = require("gulp-plumber"),
-    notify      = require("gulp-notify"),
-    gutil       = require("gulp-util"),
-    beep        = require("beepbeep"),
-    shell       = require("gulp-shell"),
-    fs          = require("fs"),
-    rimraf      = require("rimraf"),
-    sass        = require("gulp-sass");
-
-
-var themesDir   = process.env.HOME+"/.themes/",
-    theme       = "Numix-Cinnamon";
+var gulp        = require('gulp'),
+    plumber     = require('gulp-plumber'),
+    notify      = require('gulp-notify'),
+    gutil       = require('gulp-util'),
+    beep        = require('beepbeep'),
+    shell       = require('gulp-shell'),
+    fs          = require('fs'),
+    sass        = require('gulp-sass');
 
 
 // Error handler
 var onError = function (err) {
-    var errorLine   = (err.line) ? "Line " + err.line : "",
-        errorTitle  = (err.plugin) ? "Error in plugin: [ " + err.plugin + " ]" : "Error";
+    var errorLine   = (err.line) ? 'Line ' + err.line : '',
+        errorTitle  = (err.plugin) ? 'Error in plugin: [ ' + err.plugin + ' ]' : 'Error';
 
     notify.logLevel(0);
     notify({
             title: errorTitle,
             message: errorLine
     }).write(err);
-
     beep();
-
-    gutil.log(gutil.colors.red("\n"+errorTitle+"\n\n", err.message));
-
-    this.emit("end");
+    gutil.log(gutil.colors.red('\n'+errorTitle+'\n\n', err.message));
+    this.emit('end');
 };
 
 
 // Compile sass
-gulp.task("sass", function () {
-    return gulp.src("sass/cinnamon.scss")
+gulp.task('sass', function () {
+    return gulp.src('sass/cinnamon.scss')
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(sass({ outputStyle: "expanded" }))
-        .pipe(gulp.dest("."));
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }))
+        .pipe(gulp.dest('.'));
 });
 
 
 // Wait for sass to compile & reload theme
-gulp.task("reloadTheme", ["sass"], shell.task([
-    "gsettings set org.cinnamon.theme name default",
-    "gsettings set org.cinnamon.theme name "+theme
+gulp.task('reloadTheme', ['sass'], shell.task([
+    'gsettings set org.cinnamon.theme name default',
+    'gsettings set org.cinnamon.theme name Numix-Cinnamon'
 ]));
 
 
 // Make a symlink in the ~/.themes dir
-gulp.task("install", function () {
-
-    // Ensure that ".themes" dir exists
+gulp.task('install', function () {
     try {
-        fs.mkdirSync(themesDir);
+        fs.mkdirSync(process.env.HOME+'/.themes');
     } catch (err) {
-        if (err.code !== "EEXIST") throw err;
+        if (err.code !== 'EEXIST') throw err;
     }
-
-
-    // Check whether the theme dir/file exists in ".themes"
-    // If it does exist, remove it
     try {
-        if( fs.lstatSync(themesDir+theme).isDirectory() ||
-            fs.lstatSync(themesDir+theme).isFile() ) {
-
-            rimraf.sync(themesDir+theme);
-        }
+        fs.unlinkSync(process.env.HOME+'/.themes/Numix-Cinnamon');
     } catch (err) {
-        if (err.code !== "ENOENT") throw err;
+        if (err.code !== 'ENOENT') throw err;
     }
-
-
-    // Create/update the link
-    try {
-        fs.unlinkSync(themesDir+theme);
-    } catch (err) {
-        if (err.code !== "ENOENT") throw err;
-    }
-
-    fs.symlinkSync(__dirname+"/../../"+theme, themesDir+theme);
+        fs.symlinkSync(__dirname+'/../../Numix-Cinnamon', process.env.HOME+'/.themes/Numix-Cinnamon');
 });
 
 
 // Watch
-gulp.task("watch", function () {
-    gulp.watch(["sass/**/*"], ["reloadTheme"]);
+gulp.task('watch', function () {
+    gulp.watch(['sass/**/*'], ['reloadTheme']);
 });
 
 
 // Default task
-gulp.task("default", ["install", "watch"], function() {
-    gulp.start("reloadTheme");
+gulp.task('default', ['install', 'watch'], function() {
+    gulp.start('reloadTheme');
 });

@@ -565,8 +565,9 @@ StScrollBar StButton#hhandle:focus {
 
 .workspace-close-button {
   background-image: url("widget-assets/close.svg");
-  height: 41px;
+  background-size: 41px 61px;
   width: 41px;
+  height: 61px;
   -cinnamon-close-overlap: 28px;
 }
 
@@ -615,9 +616,10 @@ StScrollBar StButton#hhandle:focus {
 
 .window-close {
   background-image: url("widget-assets/close.svg");
-  height: 41px;
+  background-size: 41px 61px;
   width: 41px;
-  -cinnamon-close-overlap: 22px;
+  height: 44px;
+  -cinnamon-close-overlap: 24px;
 }
 
 /* ===================================================================

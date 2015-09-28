@@ -307,7 +307,7 @@ StScrollBar StButton#hhandle:focus {
   -boxpointer-gap: 2px;
 }
 
-.popup-menu-content {
+.popup-menu .popup-menu-content {
   border-image: url("background-assets/popup-inside.svg") 9;
   padding: .7em 0;
   color: rgba(255, 255, 255, 0.8);
@@ -2362,6 +2362,48 @@ StBoxLayout.applet-box.desktop-capture StBin {
 
 .popup-scale-menu-item {
   border-image: none;
+}
+
+/* ===================================================================
+ * ! Window list with app grouping
+ *
+ * - This applet has no stylesheet; it uses the alt-tab styles
+ * - The elements are placed inside ".popup-menu-content"
+ * - A combinator is used to isolate the styles
+ * ===================================================================*/
+.popup-menu-content {
+  spacing: 0;
+  padding: 0;
+  border-image: url("background-assets/tooltip--window-app-grouping.svg") 6;
+}
+
+.popup-menu-content .switcher-list {
+  spacing: 0;
+  padding: 0;
+  border-image: none;
+}
+
+.popup-menu-content .switcher-list .item-box {
+  padding: 0;
+  spacing: 0;
+  border-image: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.popup-menu-content .switcher-list .item-box:selected {
+  border-image: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.popup-menu-content .switcher-list .item-box .thumbnail-iconLabel {
+  spacing: 4px;
+  padding: 0;
+  font-size: 9pt;
+}
+
+.popup-menu-content .switcher-list .item-box .window-close {
+  background-image: url("widget-assets/close-2.svg");
+  background-size: 20px;
 }
 
 /* ===================================================================

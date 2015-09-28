@@ -105,7 +105,7 @@
 .window-close {
     background-image: url("widget-assets/close.svg");
     background-size: 41px 61px;
-    @include size(41px, 44px);
+    @include size(41px, 45px);
     -cinnamon-close-overlap: 24px;
 }
 

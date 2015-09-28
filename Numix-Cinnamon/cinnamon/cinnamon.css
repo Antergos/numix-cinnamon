@@ -618,7 +618,7 @@ StScrollBar StButton#hhandle:focus {
   background-image: url("widget-assets/close.svg");
   background-size: 41px 61px;
   width: 41px;
-  height: 44px;
+  height: 45px;
   -cinnamon-close-overlap: 24px;
 }
 

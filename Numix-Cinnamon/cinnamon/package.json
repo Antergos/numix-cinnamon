@@ -6,6 +6,7 @@
     "gulp-plumber": "~1.0.1",
     "gulp-sass": "~2.0.4",
     "gulp-shell": "~0.4.3",
-    "gulp-util": "~3.0.6"
+    "gulp-util": "~3.0.6",
+    "rimraf": "^2.4.3"
   }
 }

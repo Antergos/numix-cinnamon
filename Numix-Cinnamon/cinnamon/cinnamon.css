@@ -1455,10 +1455,12 @@ StScrollBar StButton#hhandle:focus {
 /* Categories */
 .menu-categories-box {
   padding: 10px 30px;
+  font-weight: bold;
 }
 
 .menu-category-button {
   padding: 7px;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .menu-category-button-greyed {

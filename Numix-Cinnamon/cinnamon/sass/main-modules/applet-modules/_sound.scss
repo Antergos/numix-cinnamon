@@ -3,19 +3,9 @@
    ===================================================================*/
 
 .sound-button {
-    border-image: url("button-assets/button.svg") 7;
-    width: 22px;
-    height: 22px;
-    padding: 8px;
-
-    &:hover { border-image: url("button-assets/button-hover.svg") 7; }
-
-    &:active { border-image: url("button-assets/button-pressed.svg") 7; }
-
-    & StIcon {
-        icon-size: 16px;
-        color: $icon-primary;
-    }
+    padding: 6px;
+    @include size(22px);
+    @include btn-primary;
 
     &-container {
         padding-right: 1px;

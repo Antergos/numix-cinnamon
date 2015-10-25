@@ -203,106 +203,6 @@ StScrollBar StButton#hhandle:focus {
 }
 
 /* ===================================================================
-   ! Buttons
-   ===================================================================*/
-/* --- normal buttons ---*/
-.modal-dialog-button,
-.notification-button {
-  background-color: transparent;
-  background-gradient-direction: none;
-  border: none;
-  border-radius: 0;
-  border-image: url("button-assets/button.svg") 9;
-  padding: 9px;
-  padding-right: 32px;
-  padding-left: 32px;
-  -st-natural-width: 80px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.modal-dialog-button:hover,
-.notification-button:hover {
-  border-image: url("button-assets/button-hover.svg") 9;
-}
-
-.modal-dialog-button:focus,
-.notification-button:focus {
-  border-image: url("button-assets/button-focused.svg") 9;
-  color: white;
-}
-
-.modal-dialog-button:active,
-.modal-dialog-button:pressed,
-.notification-button:active, .notification-button:pressed {
-  border-image: url("button-assets/button-pressed.svg") 9;
-}
-
-.modal-dialog-button:focus:hover,
-.notification-button:focus:hover {
-  border-image: url("button-assets/button-focused-hover.svg") 9;
-  color: white;
-}
-
-.modal-dialog-button:focus:active,
-.modal-dialog-button:focus:pressed,
-.notification-button:focus:active, .notification-button:focus:pressed {
-  border-image: url("button-assets/button-focused-pressed.svg") 9;
-  color: white;
-}
-
-.modal-dialog-button:disabled,
-.notification-button:disabled {
-  border-image: url("button-assets/button-insensitive.svg") 9;
-  color: rgba(255, 255, 255, 0.1);
-}
-
-/* --- icon buttons ---*/
-.notification-icon-button {
-  background-color: transparent;
-  background-gradient-direction: none;
-  border: none;
-  border-radius: 0;
-  border-image: url("button-assets/button.svg") 10;
-  padding: 10px;
-  color: #dcdcdc;
-}
-
-.notification-icon-button:hover {
-  border-image: url("button-assets/button-hover.svg") 10;
-}
-
-.notification-icon-button:focus {
-  border-image: url("button-assets/button-focused.svg") 10;
-  color: #fff;
-}
-
-.notification-icon-button:active,
-.notification-icon-button:pressed {
-  border-image: url("button-assets/button-pressed.svg") 10;
-}
-
-.notification-icon-button:focus:hover {
-  border-image: url("button-assets/button-focused-hover.svg") 10;
-  color: #fff;
-}
-
-.notification-icon-button:focus:active,
-.notification-icon-button:focus:pressed {
-  border-image: url("button-assets/button-focused-pressed.svg") 10;
-  color: #fff;
-}
-
-.notification-icon-button:disabled {
-  border-image: url("button-assets/button-insensitive.svg") 10;
-  color: #444;
-}
-
-.notification-icon-button > StIcon {
-  icon-size: 16px;
-}
-
-/* ===================================================================
    ! Popup Menus
    ===================================================================*/
 .popup-menu {
@@ -770,6 +670,103 @@ StScrollBar StButton#hhandle:focus {
   spacing: 10px;
 }
 
+.notification-button,
+.notification-icon-button {
+  background-color: transparent;
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: 0 0 transparent;
+  border: none;
+  border-width: 0;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 9pt;
+  border-image: url("button-assets/button-primary.svg") 10;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.notification-button:grayed,
+.notification-button:disabled,
+.notification-button:insensitive,
+.notification-icon-button:grayed,
+.notification-icon-button:disabled,
+.notification-icon-button:insensitive {
+  border-image: url("button-assets/button-insensitive.svg") 10;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.notification-button > StIcon,
+.notification-icon-button > StIcon {
+  width: 16px;
+  height: 16px;
+  icon-size: 16px;
+}
+
+.notification-button:hover,
+.notification-icon-button:hover {
+  border-image: url("button-assets/button-primary-hover.svg") 10;
+}
+
+.notification-button:active,
+.notification-button:pressed,
+.notification-icon-button:active,
+.notification-icon-button:pressed {
+  border-image: url("button-assets/button-primary-pressed.svg") 10;
+}
+
+.notification-button:focus,
+.notification-icon-button:focus {
+  border-image: url("button-assets/button-orange.svg") 10;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.notification-button:focus:hover,
+.notification-icon-button:focus:hover {
+  border-image: url("button-assets/button-orange-hover.svg") 10;
+}
+
+.notification-button:focus:active,
+.notification-button:focus:pressed,
+.notification-icon-button:focus:active,
+.notification-icon-button:focus:pressed {
+  border-image: url("button-assets/button-orange-pressed.svg") 10;
+}
+
+.notification-button > StIcon,
+.notification-icon-button > StIcon {
+  color: #dcdcdc;
+}
+
+.notification-button:hover > StIcon,
+.notification-button:active > StIcon,
+.notification-button:pressed > StIcon,
+.notification-icon-button:hover > StIcon,
+.notification-icon-button:active > StIcon,
+.notification-icon-button:pressed > StIcon {
+  color: #dcdcdc;
+}
+
+.notification-button:focus > StIcon,
+.notification-button:focus:hover > StIcon,
+.notification-button:focus:active > StIcon,
+.notification-button:focus:pressed > StIcon,
+.notification-icon-button:focus > StIcon,
+.notification-icon-button:focus:hover > StIcon,
+.notification-icon-button:focus:active > StIcon,
+.notification-icon-button:focus:pressed > StIcon {
+  color: #dcdcdc;
+}
+
+.notification-button {
+  padding: 0.9em 2.2em 0.9em 2.2em;
+  -st-natural-width: 8em;
+}
+
+.notification-icon-button {
+  padding: .9em;
+}
+
 /* ===================================================================
    ! Notification applet
    ===================================================================*/
@@ -895,6 +892,75 @@ StScrollBar StButton#hhandle:focus {
   padding: 5px 8px 6px 8px;
 }
 
+.modal-dialog-button {
+  background-color: transparent;
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: 0 0 transparent;
+  border: none;
+  border-width: 0;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 9pt;
+  border-image: url("button-assets/button-primary.svg") 10;
+  color: rgba(255, 255, 255, 0.8);
+  padding: .9em;
+}
+
+.modal-dialog-button:grayed,
+.modal-dialog-button:disabled,
+.modal-dialog-button:insensitive {
+  border-image: url("button-assets/button-insensitive.svg") 10;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-dialog-button > StIcon {
+  width: 16px;
+  height: 16px;
+  icon-size: 16px;
+}
+
+.modal-dialog-button:hover {
+  border-image: url("button-assets/button-primary-hover.svg") 10;
+}
+
+.modal-dialog-button:active,
+.modal-dialog-button:pressed {
+  border-image: url("button-assets/button-primary-pressed.svg") 10;
+}
+
+.modal-dialog-button:focus {
+  border-image: url("button-assets/button-orange.svg") 10;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-dialog-button:focus:hover {
+  border-image: url("button-assets/button-orange-hover.svg") 10;
+}
+
+.modal-dialog-button:focus:active,
+.modal-dialog-button:focus:pressed {
+  border-image: url("button-assets/button-orange-pressed.svg") 10;
+}
+
+.modal-dialog-button > StIcon {
+  color: #dcdcdc;
+}
+
+.modal-dialog-button:hover > StIcon,
+.modal-dialog-button:active > StIcon,
+.modal-dialog-button:pressed > StIcon {
+  color: #dcdcdc;
+}
+
+.modal-dialog-button:focus > StIcon,
+.modal-dialog-button:focus:hover > StIcon,
+.modal-dialog-button:focus:active > StIcon,
+.modal-dialog-button:focus:pressed > StIcon {
+  color: #dcdcdc;
+}
+
 /* ===================================================================
    ! Run dialog
    ===================================================================*/
@@ -1009,25 +1075,73 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .keyboard-key {
-  border-image: url("button-assets/button.svg") 9;
-  padding: 16px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 12pt;
+  background-color: transparent;
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: 0 0 transparent;
+  border: none;
+  border-width: 0;
+  border-radius: 0;
   font-weight: bold;
+  font-size: 9pt;
+  border-image: url("button-assets/button-primary.svg") 10;
+  color: rgba(255, 255, 255, 0.8);
+  padding: .9em;
+  font-size: 12pt;
+}
+
+.keyboard-key:grayed,
+.keyboard-key:disabled,
+.keyboard-key:insensitive {
+  border-image: url("button-assets/button-insensitive.svg") 10;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.keyboard-key > StIcon {
+  width: 16px;
+  height: 16px;
+  icon-size: 16px;
 }
 
 .keyboard-key:hover {
-  border-image: url("button-assets/button-hover.svg") 9;
+  border-image: url("button-assets/button-primary-hover.svg") 10;
 }
 
-.keyboard-key:checked,
-.keyboard-key:active {
-  border-image: url("button-assets/button-pressed.svg") 9;
+.keyboard-key:active,
+.keyboard-key:pressed {
+  border-image: url("button-assets/button-primary-pressed.svg") 10;
 }
 
-.keyboard-key:grayed {
-  border-image: url("button-assets/button-insensitive.svg") 9;
-  color: rgba(255, 255, 255, 0.1);
+.keyboard-key:focus {
+  border-image: url("button-assets/button-orange.svg") 10;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.keyboard-key:focus:hover {
+  border-image: url("button-assets/button-orange-hover.svg") 10;
+}
+
+.keyboard-key:focus:active,
+.keyboard-key:focus:pressed {
+  border-image: url("button-assets/button-orange-pressed.svg") 10;
+}
+
+.keyboard-key > StIcon {
+  color: #dcdcdc;
+}
+
+.keyboard-key:hover > StIcon,
+.keyboard-key:active > StIcon,
+.keyboard-key:pressed > StIcon {
+  color: #dcdcdc;
+}
+
+.keyboard-key:focus > StIcon,
+.keyboard-key:focus:hover > StIcon,
+.keyboard-key:focus:active > StIcon,
+.keyboard-key:focus:pressed > StIcon {
+  color: #dcdcdc;
 }
 
 .keyboard-subkeys {
@@ -1267,22 +1381,73 @@ StScrollBar StButton#hhandle:focus {
    ! Sound Applet
    ===================================================================*/
 .sound-button {
-  border-image: url("button-assets/button.svg") 7;
+  padding: 6px;
   width: 22px;
   height: 22px;
-  padding: 8px;
+  background-color: transparent;
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: 0 0 transparent;
+  border: none;
+  border-width: 0;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 9pt;
+  border-image: url("button-assets/button-primary.svg") 10;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sound-button:grayed,
+.sound-button:disabled,
+.sound-button:insensitive {
+  border-image: url("button-assets/button-insensitive.svg") 10;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.sound-button > StIcon {
+  width: 16px;
+  height: 16px;
+  icon-size: 16px;
 }
 
 .sound-button:hover {
-  border-image: url("button-assets/button-hover.svg") 7;
+  border-image: url("button-assets/button-primary-hover.svg") 10;
 }
 
-.sound-button:active {
-  border-image: url("button-assets/button-pressed.svg") 7;
+.sound-button:active,
+.sound-button:pressed {
+  border-image: url("button-assets/button-primary-pressed.svg") 10;
 }
 
-.sound-button StIcon {
-  icon-size: 16px;
+.sound-button:focus {
+  border-image: url("button-assets/button-orange.svg") 10;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sound-button:focus:hover {
+  border-image: url("button-assets/button-orange-hover.svg") 10;
+}
+
+.sound-button:focus:active,
+.sound-button:focus:pressed {
+  border-image: url("button-assets/button-orange-pressed.svg") 10;
+}
+
+.sound-button > StIcon {
+  color: #dcdcdc;
+}
+
+.sound-button:hover > StIcon,
+.sound-button:active > StIcon,
+.sound-button:pressed > StIcon {
+  color: #dcdcdc;
+}
+
+.sound-button:focus > StIcon,
+.sound-button:focus:hover > StIcon,
+.sound-button:focus:active > StIcon,
+.sound-button:focus:pressed > StIcon {
   color: #dcdcdc;
 }
 
@@ -2696,20 +2861,73 @@ StBoxLayout.applet-box.desktop-capture StBin {
 }
 
 .calc-button {
-  border-image: url("button-assets/button.svg") 7;
-  height: 32px;
   width: 38px;
+  height: 32px;
+  background-color: transparent;
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: 0 0 transparent;
+  border: none;
   border-width: 0;
-  margin: 0;
-  color: #dcdcdc;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 9pt;
+  border-image: url("button-assets/button-primary.svg") 10;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.calc-button:grayed,
+.calc-button:disabled,
+.calc-button:insensitive {
+  border-image: url("button-assets/button-insensitive.svg") 10;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.calc-button > StIcon {
+  width: 16px;
+  height: 16px;
+  icon-size: 16px;
 }
 
 .calc-button:hover {
-  border-image: url("button-assets/button-hover.svg") 7;
+  border-image: url("button-assets/button-primary-hover.svg") 10;
 }
 
-.calc-button:active {
-  border-image: url("button-assets/button-pressed.svg") 7;
+.calc-button:active,
+.calc-button:pressed {
+  border-image: url("button-assets/button-primary-pressed.svg") 10;
+}
+
+.calc-button:focus {
+  border-image: url("button-assets/button-orange.svg") 10;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.calc-button:focus:hover {
+  border-image: url("button-assets/button-orange-hover.svg") 10;
+}
+
+.calc-button:focus:active,
+.calc-button:focus:pressed {
+  border-image: url("button-assets/button-orange-pressed.svg") 10;
+}
+
+.calc-button > StIcon {
+  color: #dcdcdc;
+}
+
+.calc-button:hover > StIcon,
+.calc-button:active > StIcon,
+.calc-button:pressed > StIcon {
+  color: #dcdcdc;
+}
+
+.calc-button:focus > StIcon,
+.calc-button:focus:hover > StIcon,
+.calc-button:focus:active > StIcon,
+.calc-button:focus:pressed > StIcon {
+  color: #dcdcdc;
 }
 
 .calc-button-padding {

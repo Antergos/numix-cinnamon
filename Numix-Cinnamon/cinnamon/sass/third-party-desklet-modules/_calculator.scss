@@ -62,16 +62,8 @@
 
 
 .calc-button {
-    border-image: url("button-assets/button.svg") 7;
-    height: 32px;
-    width: 38px;
-    border-width: 0;
-    margin: 0;
-    color: $icon-primary;
-
-    &:hover { border-image: url("button-assets/button-hover.svg") 7; }
-
-    &:active { border-image: url("button-assets/button-pressed.svg") 7; }
+    @include size(38px, 32px);
+    @include btn-primary;
 
     &-padding { padding: 2px; }
 }

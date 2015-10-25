@@ -16,25 +16,9 @@
 }
 
 .keyboard-key {
-    border-image: url("button-assets/button.svg") 9;
-    padding: 16px;
-    color: $text-primary;
+    @include btn-primary;
+    @include btn-width(small);
     font-size: 12pt;
-    font-weight: bold;
-
-    &:hover {
-        border-image: url("button-assets/button-hover.svg") 9;
-    }
-
-    &:checked,
-    &:active {
-        border-image: url("button-assets/button-pressed.svg") 9;
-    }
-
-    &:grayed {
-        border-image: url("button-assets/button-insensitive.svg") 9;
-        color: $text-disabled;
-    }
 }
 
 .keyboard-subkeys {

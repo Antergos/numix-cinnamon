@@ -61,6 +61,20 @@
         spacing: 10px;
     }
 }
+
+.notification-button,
+.notification-icon-button {
+    @include btn-primary;
+}
+
+.notification-button {
+    @include btn-width(wide);
+}
+
+.notification-icon-button {
+    @include btn-width(small);
+}
+
 /* ===================================================================
    ! Notification applet
    ===================================================================*/

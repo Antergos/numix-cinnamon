@@ -76,32 +76,32 @@ StScrollBar StButton#hhandle:focus {
 .popup-menu StEntry,
 .modal-dialog StEntry,
 #notification StEntry {
-  background-gradient-direction: none;
+  background-gradient-direction: vertical;
   background-gradient-start: transparent;
   background-gradient-end: transparent;
   border: 0;
+  border-width: 0;
   box-shadow: 0 0 transparent;
   border-radius: 0;
   border-image: url("widget-assets/entry.svg") 6;
-  padding: 5px 12px 4px 12px;
+  padding: 4px 8px 3px 8px;
   height: 22px;
   width: 220px;
-  font-size: 9pt;
+  font-size: 10pt;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.4);
 }
 
-.popup-menu StEntry StIcon,
-.modal-dialog StEntry StIcon,
-#notification StEntry StIcon {
-  color: #888;
-}
-
 .popup-menu StEntry:focus,
+.popup-menu StEntry:active,
+.popup-menu StEntry:pressed,
 .modal-dialog StEntry:focus,
-#notification StEntry:focus {
-  border-image: url("widget-assets/entry-focused.svg") 9;
-  font-size: 10pt;
+.modal-dialog StEntry:active,
+.modal-dialog StEntry:pressed,
+#notification StEntry:focus,
+#notification StEntry:active,
+#notification StEntry:pressed {
+  border-image: url("widget-assets/entry-focused.svg") 6;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
   caret-color: rgba(255, 255, 255, 0.8);
@@ -110,9 +110,21 @@ StScrollBar StButton#hhandle:focus {
   selection-background-color: #d64937;
 }
 
-.popup-menu StEntry:focus StIcon,
-.modal-dialog StEntry:focus StIcon,
-#notification StEntry:focus StIcon {
+.popup-menu StEntry StIcon,
+.modal-dialog StEntry StIcon,
+#notification StEntry StIcon {
+  color: #888;
+}
+
+.popup-menu StEntry:focus > StIcon,
+.popup-menu StEntry:active > StIcon,
+.popup-menu StEntry:pressed > StIcon,
+.modal-dialog StEntry:focus > StIcon,
+.modal-dialog StEntry:active > StIcon,
+.modal-dialog StEntry:pressed > StIcon,
+#notification StEntry:focus > StIcon,
+#notification StEntry:active > StIcon,
+#notification StEntry:pressed > StIcon {
   color: #dcdcdc;
 }
 
@@ -2498,44 +2510,52 @@ StBoxLayout.applet-box.desktop-capture StBin {
 }
 
 .sticky-text-box {
-  background-gradient-direction: none;
+  background-gradient-direction: vertical;
   background-gradient-start: transparent;
   background-gradient-end: transparent;
   border: 0;
+  border-width: 0;
   box-shadow: 0 0 transparent;
   border-radius: 0;
   border-image: url("widget-assets/entry.svg") 6;
-  padding: 5px 12px 4px 12px;
-  font-size: 9pt;
+  padding: 4px 8px 3px 8px;
+  font-size: 10pt;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.4);
   padding: 6px;
 }
 
-.sticky-text-box StIcon {
-  color: #888;
-}
-
-.sticky-text-box:active {
-  background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  border: 0;
-  box-shadow: 0 0 transparent;
-  border-radius: 0;
-  border-image: url("widget-assets/entry-focused.svg") 9;
-  font-size: 10pt;
+.sticky-text-box:focus,
+.sticky-text-box:active,
+.sticky-text-box:pressed {
+  border-image: url("widget-assets/entry-focused.svg") 6;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
   caret-color: rgba(255, 255, 255, 0.8);
   caret-size: 1px;
   selected-color: white;
   selection-background-color: #d64937;
-  padding: 6px;
 }
 
-.sticky-text-box:active StIcon {
+.sticky-text-box StIcon {
+  color: #888;
+}
+
+.sticky-text-box:focus > StIcon,
+.sticky-text-box:active > StIcon,
+.sticky-text-box:pressed > StIcon {
   color: #dcdcdc;
+}
+
+.sticky-text-box:active {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  border: 0;
+  border-width: 0;
+  box-shadow: 0 0 transparent;
+  border-radius: 0;
+  padding: 6px;
 }
 
 .sticky-text-box StEntry {

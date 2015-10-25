@@ -1571,16 +1571,16 @@ StScrollBar StButton#hhandle:focus {
 .info-osd {
   text-align: center;
   font-weight: bold;
-  spacing: 1em;
-  padding: 16px;
-  font-size: 12pt;
+  spacing: .4em;
+  padding: 1.4em;
+  font-size: 14pt;
   color: rgba(255, 255, 255, 0.8);
   border-image: url("background-assets/popup.svg") 7;
 }
 
 .osd-window {
-  spacing: 1em;
-  padding: 16px;
+  spacing: .4em;
+  padding: 1.4em;
   color: rgba(255, 255, 255, 0.8);
   border-image: url("background-assets/popup.svg") 10;
   font-size: 20pt;
@@ -1608,14 +1608,20 @@ StScrollBar StButton#hhandle:focus {
    ===================================================================*/
 #LookingGlassDialog {
   border-image: url("background-assets/popup.svg") 7;
-  padding: 14px;
-  font-size: 12pt;
+  padding: 1.4em;
+  spacing: .4em;
   color: rgba(255, 255, 255, 0.8);
 }
 
-#LookingGlassDialog *:last-child {
-  color: rgba(255, 255, 255, 0.4);
+#LookingGlassDialog StLabel:first-child {
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+#LookingGlassDialog StLabel:last-child {
   padding-top: .4em;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12pt;
 }
 
 /* ===================================================================

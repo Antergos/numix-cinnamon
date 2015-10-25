@@ -28,9 +28,9 @@
 }
 
 .panel-dummy {
-    background-color: alpha($accent, .8);
+    background-color: alpha($accent-primary, .8);
 
-    &:entered { background-color: $accent; }
+    &:entered { background-color: $accent-primary; }
 }
 
 /* This styles the systray items */

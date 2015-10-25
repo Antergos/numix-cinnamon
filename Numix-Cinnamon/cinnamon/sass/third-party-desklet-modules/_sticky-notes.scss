@@ -18,7 +18,7 @@
         width: 24px;
     }
 
-    &-selected * { color: $accent; }
+    &-selected * { color: $accent-primary; }
 
     &-box {
         padding: 0;
@@ -97,5 +97,5 @@
     selected-color: $text-primary;
     caret-color: $text-primary;
     caret-size: 1px;
-    selection-background-color: $accent;
+    selection-background-color: $accent-primary;
 }

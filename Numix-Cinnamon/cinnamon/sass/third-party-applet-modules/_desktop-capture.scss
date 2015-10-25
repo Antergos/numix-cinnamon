@@ -20,7 +20,7 @@ StBoxLayout.applet-box.desktop-capture StBin {
 
 /* Window capture mode */
 .capture-outline-background {
-    background-color: alpha($accent, .8);
+    background-color: alpha($accent-primary, .8);
 }
 
 .capture-outline-frame {

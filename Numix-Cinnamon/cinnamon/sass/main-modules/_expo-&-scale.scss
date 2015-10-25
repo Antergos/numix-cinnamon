@@ -44,11 +44,11 @@
     &:focus,
     &#selected:focus {
         border-image: url("expo-scale-assets/workspace-name-pressed.svg") 12;
-        color: $accent;
+        color: $accent-primary;
         selected-color: $text-primary;
         caret-color: $text-primary;
         caret-size: 1px;
-        selection-background-color: $accent;
+        selection-background-color: $accent-primary;
     }
 }
 

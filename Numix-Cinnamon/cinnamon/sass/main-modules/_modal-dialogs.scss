@@ -50,12 +50,12 @@
     &-error-box {
         padding: 12px 4px 6px 4px;
         spacing: 1em;
-        color: $accent;
+        color: $text-danger;
         font-weight: bold;
 
         StIcon {
             @include size(16px);
-            color: $accent;
+            color: $accent-danger;
         }
     }
 
@@ -93,7 +93,7 @@
 .about-version {
     padding-left: 7px;
     font-size: 9pt;
-    color: $accent;
+    color: $text-info;
 }
 
 .about-icon {

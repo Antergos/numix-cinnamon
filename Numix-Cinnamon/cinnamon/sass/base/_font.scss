@@ -10,12 +10,12 @@ stage {
 }
 
 .cinnamon-link {
-    color: $accent;
+    color: $accent-primary;
     font-weight: normal;
-    text-decoration: underline;
 
     &:hover {
-        color: lighten($accent, 10%);
+        color: lighten($link, 12%);
+        text-decoration: underline;
     }
 }
 

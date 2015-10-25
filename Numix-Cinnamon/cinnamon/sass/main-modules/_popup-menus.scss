@@ -38,6 +38,12 @@
             .popup-menu-icon, StIcon {
                 color: $icon-active;
             }
+
+            .popup-menu-item-dot {
+                background-image: url("widget-assets/check-dot-hover.svg");
+                background-size: 10px;
+                color: rgba(0, 0, 0, 0);
+            }
         }
 
         &:insensitive {
@@ -46,7 +52,11 @@
         }
     }
 
-    &-item-dot {/*!*/}
+    &-item-dot {
+        background-image: url("widget-assets/check-dot.svg");
+        background-size: 10px;
+        color: rgba(0, 0, 0, 0);
+    }
 }
 
 

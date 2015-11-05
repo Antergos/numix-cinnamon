@@ -293,6 +293,10 @@ StScrollBar StButton#hhandle:focus {
   color: rgba(255, 255, 255, 0.1);
 }
 
+.popup-menu-item:insensitive .popup-menu-icon, .popup-menu-item:insensitive StIcon {
+  color: #444;
+}
+
 .popup-menu-item-dot {
   background-image: url("widget-assets/check-dot.svg");
   background-size: 10px;

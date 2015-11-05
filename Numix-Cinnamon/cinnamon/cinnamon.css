@@ -203,6 +203,37 @@ StScrollBar StButton#hhandle:focus {
 }
 
 /* ===================================================================
+   ! Slider
+   ===================================================================*/
+.slider {
+  -slider-height: 2px;
+  -slider-background-color: transparent;
+  -slider-border-color: transparent;
+  -slider-active-background-color: #d64937;
+  -slider-active-border-color: transparent;
+  -slider-border-width: 2px;
+  -slider-handle-radius: 4px;
+  color: #dcdcdc;
+  border-image: url("widget-assets/slider.svg") 9 6 8 8;
+  border: 0 solid transparent;
+  min-width: 15em;
+  height: 16px;
+}
+
+.popup-menu-item:active .slider {
+  -slider-handle-radius: 5px;
+  color: white;
+}
+
+/* ===================================================================
+   ! Separator
+   ===================================================================*/
+.separator {
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 1px;
+}
+
+/* ===================================================================
    ! Popup Menus
    ===================================================================*/
 .popup-menu {
@@ -229,6 +260,12 @@ StScrollBar StButton#hhandle:focus {
 .popup-menu-icon, .popup-menu StIcon {
   icon-size: 16px;
   color: #dcdcdc;
+}
+
+.popup-menu-arrow {
+  width: 10px;
+  height: 10px;
+  padding: 0;
 }
 
 .popup-menu-item {
@@ -316,6 +353,12 @@ StScrollBar StButton#hhandle:focus {
 
 .popup-inactive-menu-item {
   color: rgba(255, 255, 255, 0.4);
+}
+
+/* used mainly for the notif-applet */
+.popup-menu-item .popup-subtitle-menu-item {
+  font-weight: bold;
+  color: white;
 }
 
 /* ===================================================================
@@ -560,6 +603,7 @@ StScrollBar StButton#hhandle:focus {
 .desklet-with-borders-and-header {
   border-image: url("background-assets/desklet-body.svg") 9;
   color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
   padding: 5px;
 }
 
@@ -620,27 +664,6 @@ StScrollBar StButton#hhandle:focus {
   color: rgba(255, 255, 255, 0.8);
 }
 
-#notification.multi-line-notification {
-  /*!*/
-}
-
-#notification-scrollview {
-  max-height: 100em;
-}
-
-#notification-scrollview > .top-shadow,
-#notification-scrollview > .bottom-shadow {
-  height: 10em;
-}
-
-#notification-scrollview:ltr > StScrollBar {
-  padding-left: 6px;
-}
-
-#notification-scrollview:rtl > StScrollBar {
-  padding-right: 6px;
-}
-
 #notification CinnamonGenericContainer * {
   font-weight: normal;
   font-size: 9pt;
@@ -663,11 +686,11 @@ StScrollBar StButton#hhandle:focus {
   font-weight: normal;
   font-size: 9pt;
   padding: 0.8em 0 0.6em 0;
-  border-top: 1px #333;
+  border-top: 1px rgba(0, 0, 0, 0.05);
 }
 
 #notification-actions {
-  spacing: 10px;
+  spacing: .2em;
 }
 
 .notification-button,
@@ -694,6 +717,15 @@ StScrollBar StButton#hhandle:focus {
 .notification-icon-button:insensitive {
   border-image: url("button-assets/button-insensitive.svg") 10;
   color: rgba(255, 255, 255, 0.1);
+}
+
+.notification-button:grayed StIcon,
+.notification-button:disabled StIcon,
+.notification-button:insensitive StIcon,
+.notification-icon-button:grayed StIcon,
+.notification-icon-button:disabled StIcon,
+.notification-icon-button:insensitive StIcon {
+  color: #444;
 }
 
 .notification-button > StIcon,
@@ -771,7 +803,7 @@ StScrollBar StButton#hhandle:focus {
    ! Notification applet
    ===================================================================*/
 .notification-applet-padding {
-  padding: 0.6em 0.4em;
+  padding: 0.6em 0.8em;
 }
 
 .notification-applet-padding:first-child {
@@ -784,26 +816,29 @@ StScrollBar StButton#hhandle:focus {
 
 /* Notifs look inside the notification applet & other popups. */
 .popup-menu-content #notification {
-  border-image: url("background-assets/dark-bg.svg") 7;
-  padding: 0.8em 0.8em 0.6em 0.8em;
+  border-image: url("background-assets/dark-bg-marked-orange.svg") 7;
+  padding: 0.8em 0.8em 0.6em 1em;
+}
+
+.popup-menu-content #notification.multi-line-notification {
+  border-image: url("background-assets/dark-bg-marked-blue.svg") 7;
+}
+
+.popup-menu-content #notification.notification-with-image {
+  border-image: url("background-assets/dark-bg-marked-green.svg") 7;
 }
 
 /* ===================================================================
    ! Alt Tab
+
+   * The styles are namespaced under the "#altTabPopup" selector
    ===================================================================*/
 #altTabPopup {
   padding: 0;
   spacing: 4px;
 }
 
-.switcher-list {
-  border-image: url("expo-scale-assets/window-name.svg") 7;
-  color: rgba(255, 255, 255, 0.8);
-  padding: 0 3px;
-  font-weight: bold;
-}
-
-.switcher-list:last-child {
+#altTabPopup .switcher-list:last-child {
   border-image: url("background-assets/popup.svg") 7;
   color: rgba(255, 255, 255, 0.8);
   padding: 0;
@@ -811,21 +846,21 @@ StScrollBar StButton#hhandle:focus {
   font-weight: bold;
 }
 
-.switcher-list:last-child .item-box {
+#altTabPopup .switcher-list:last-child .item-box {
   padding: 10px;
 }
 
-.switcher-list:last-child .item-box:selected {
+#altTabPopup .switcher-list:last-child .item-box:selected {
   border-image: none;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.switcher-list:last-child .item-box StLabel {
+#altTabPopup .switcher-list:last-child .item-box StLabel {
   padding-top: .8em;
 }
 
-.switcher-list:first-child:last-child,
-.switcher-list:first-child {
+#altTabPopup .switcher-list:first-child:last-child,
+#altTabPopup .switcher-list:first-child {
   border-image: url("background-assets/popup.svg") 7;
   color: rgba(255, 255, 255, 0.8);
   padding: 2px;
@@ -833,27 +868,27 @@ StScrollBar StButton#hhandle:focus {
   font-weight: bold;
 }
 
-.switcher-list:first-child:last-child .item-box,
-.switcher-list:first-child .item-box {
+#altTabPopup .switcher-list:first-child:last-child .item-box,
+#altTabPopup .switcher-list:first-child .item-box {
   padding: 10px;
 }
 
-.switcher-list:first-child:last-child .item-box:selected,
-.switcher-list:first-child .item-box:selected {
+#altTabPopup .switcher-list:first-child:last-child .item-box:selected,
+#altTabPopup .switcher-list:first-child .item-box:selected {
   border-image: url("background-assets/hover.svg") 7;
   color: white;
 }
 
-.switcher-list:first-child:last-child .item-box StLabel,
-.switcher-list:first-child .item-box StLabel {
+#altTabPopup .switcher-list:first-child:last-child .item-box StLabel,
+#altTabPopup .switcher-list:first-child .item-box StLabel {
   padding-top: .4em;
 }
 
-.switcher-list-item-container {
+#altTabPopup .switcher-list-item-container {
   spacing: 0;
 }
 
-.thumbnail {
+#altTabPopup .thumbnail {
   width: 256px;
 }
 
@@ -913,6 +948,12 @@ StScrollBar StButton#hhandle:focus {
 .modal-dialog-button:insensitive {
   border-image: url("button-assets/button-insensitive.svg") 10;
   color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-dialog-button:grayed StIcon,
+.modal-dialog-button:disabled StIcon,
+.modal-dialog-button:insensitive StIcon {
+  color: #444;
 }
 
 .modal-dialog-button > StIcon {
@@ -1096,6 +1137,12 @@ StScrollBar StButton#hhandle:focus {
 .keyboard-key:insensitive {
   border-image: url("button-assets/button-insensitive.svg") 10;
   color: rgba(255, 255, 255, 0.1);
+}
+
+.keyboard-key:grayed StIcon,
+.keyboard-key:disabled StIcon,
+.keyboard-key:insensitive StIcon {
+  color: #444;
 }
 
 .keyboard-key > StIcon {
@@ -1377,13 +1424,57 @@ StScrollBar StButton#hhandle:focus {
   border-image: url("panel-assets/panel-bottom-item-attention-hover.svg") 4;
 }
 
+/* This styles the window-list preview and window name
+   in "cover" and "timeline" alt-tab modes */
+.switcher-list {
+  border-image: url("background-assets/tooltip.svg") 7;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 3px;
+  font-weight: bold;
+}
+
+.switcher-list > StBoxLayout {
+  spacing: .4em;
+}
+
+.switcher-list > StBoxLayout > StBoxLayout {
+  spacing: .4em;
+}
+
 /* ===================================================================
    ! Sound Applet
    ===================================================================*/
-.sound-button {
-  padding: 6px;
-  width: 22px;
-  height: 22px;
+.sound-player {
+  padding: 0 0 1px 0;
+}
+
+.sound-player > StBoxLayout:first-child {
+  padding: 0.4em 1.3em 0.6em 1.3em;
+  spacing: .4em;
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+.sound-player > StBoxLayout:first-child StButton:small {
+  width: 16px;
+  height: 16px;
+  padding: 1px;
+}
+
+.sound-player-generic-coverart {
+  padding: 0 2px;
+}
+
+.sound-player-overlay {
+  border-image: url("background-assets/sound-applet-album-overlay.svg") 7;
+  width: 290px;
+  height: 70px;
+  padding: 1.3em 1.3em 2.5em 1.3em;
+  spacing: .5em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sound-player-overlay StButton {
   background-color: transparent;
   background-gradient-direction: none;
   background-gradient-start: transparent;
@@ -1396,133 +1487,87 @@ StScrollBar StButton#hhandle:focus {
   font-size: 9pt;
   border-image: url("button-assets/button-primary.svg") 10;
   color: rgba(255, 255, 255, 0.8);
+  padding: .9em;
 }
 
-.sound-button:grayed,
-.sound-button:disabled,
-.sound-button:insensitive {
+.sound-player-overlay StButton:grayed,
+.sound-player-overlay StButton:disabled,
+.sound-player-overlay StButton:insensitive {
   border-image: url("button-assets/button-insensitive.svg") 10;
   color: rgba(255, 255, 255, 0.1);
 }
 
-.sound-button > StIcon {
+.sound-player-overlay StButton:grayed StIcon,
+.sound-player-overlay StButton:disabled StIcon,
+.sound-player-overlay StButton:insensitive StIcon {
+  color: #444;
+}
+
+.sound-player-overlay StButton > StIcon {
   width: 16px;
   height: 16px;
   icon-size: 16px;
 }
 
-.sound-button:hover {
+.sound-player-overlay StButton:hover {
   border-image: url("button-assets/button-primary-hover.svg") 10;
 }
 
-.sound-button:active,
-.sound-button:pressed {
+.sound-player-overlay StButton:active,
+.sound-player-overlay StButton:pressed {
   border-image: url("button-assets/button-primary-pressed.svg") 10;
 }
 
-.sound-button:focus {
+.sound-player-overlay StButton:focus {
   border-image: url("button-assets/button-orange.svg") 10;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.sound-button:focus:hover {
+.sound-player-overlay StButton:focus:hover {
   border-image: url("button-assets/button-orange-hover.svg") 10;
 }
 
-.sound-button:focus:active,
-.sound-button:focus:pressed {
+.sound-player-overlay StButton:focus:active,
+.sound-player-overlay StButton:focus:pressed {
   border-image: url("button-assets/button-orange-pressed.svg") 10;
 }
 
-.sound-button > StIcon {
+.sound-player-overlay StButton > StIcon {
   color: #dcdcdc;
 }
 
-.sound-button:hover > StIcon,
-.sound-button:active > StIcon,
-.sound-button:pressed > StIcon {
+.sound-player-overlay StButton:hover > StIcon,
+.sound-player-overlay StButton:active > StIcon,
+.sound-player-overlay StButton:pressed > StIcon {
   color: #dcdcdc;
 }
 
-.sound-button:focus > StIcon,
-.sound-button:focus:hover > StIcon,
-.sound-button:focus:active > StIcon,
-.sound-button:focus:pressed > StIcon {
+.sound-player-overlay StButton:focus > StIcon,
+.sound-player-overlay StButton:focus:hover > StIcon,
+.sound-player-overlay StButton:focus:active > StIcon,
+.sound-player-overlay StButton:focus:pressed > StIcon {
   color: #dcdcdc;
 }
 
-.sound-button-container {
-  padding-right: 1px;
-  padding-left: 1px;
+.sound-player-overlay StBoxLayout {
+  padding-top: .2em;
+  spacing: .4em;
 }
 
-.sound-track-infos {
-  padding: 5px;
-  padding-left: 15px;
-}
-
-.sound-track-info {
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-
-.sound-track-info StIcon {
-  icon-size: 16px;
-  color: #dcdcdc;
-}
-
-.sound-track-info StLabel {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.sound-track-box {
-  max-width: 220px;
-}
-
-.sound-track-cover {
-  border-image: url("background-assets/submenu-bg.svg") 9;
-  padding: 20px;
-}
-
-.sound-seek-box {
-  padding-left: 15px;
-}
-
-.sound-seek-box StLabel {
-  padding-top: 3px;
-}
-
-.sound-seek-box StIcon {
-  icon-size: 16px;
-  color: #dcdcdc;
-}
-
-.sound-seek-slider {
-  width: 170px;
-}
-
-.sound-volume-menu-item {
-  padding: 0.4em 1.3em;
-}
-
-.sound-volume-menu-item StIcon {
-  icon-size: 16px;
-  padding-left: 8px;
-  padding-right: 8px;
-  color: #dcdcdc;
-}
-
-.sound-playback-control {
+.sound-player .slider {
+  border-image: none;
   padding: 0;
-  padding-top: 5px;
-  padding-bottom: 10px;
+  height: .5em;
+  -slider-height: .4em;
+  -slider-background-color: #333;
+  -slider-active-background-color: #d64937;
+  -slider-handle-radius: 0;
 }
 
 /* ===================================================================
-     ! Workspace Switcher
-     ===================================================================*/
-#workspaceSwitcher {
+   ! Number-mode Workspace Switcher applet
+   ===================================================================*/
+.workspace-switcher {
   spacing: 0;
 }
 
@@ -1562,11 +1607,55 @@ StScrollBar StButton#hhandle:focus {
   border-image: url("panel-assets/panel-bottom-item-active-hover.svg") 4;
 }
 
-/* Items in the bottom panel are shifted by 1px down.
-     This fixes it for this applet specifically.
-     The global fix is in the panel module */
-.panel-bottom .workspace-button {
-  padding-top: 1px;
+/* ===================================================================
+   ! Visual-mode Workspace Switcher applet
+   ===================================================================*/
+.workspace-graph {
+  padding: 0 4px;
+  spacing: 3px;
+}
+
+/* Different images/paddings used in top & bottom panels. */
+.panel-top .workspace {
+  border-image: url("panel-assets/panel-top-item-hover.svg") 4;
+  padding: 0 0 3px 0;
+}
+
+.panel-top .workspace .windows {
+  -inactive-window-background: rgba(120, 120, 120, 0.9);
+  -inactive-window-border: rgba(0, 0, 0, 0.7);
+}
+
+.panel-top .workspace:active {
+  border-image: url("panel-assets/panel-top-item-active-hover.svg") 4;
+}
+
+.panel-top .workspace:active .windows {
+  -active-window-background: rgba(210, 210, 210, 0.9);
+  -active-window-border: rgba(0, 0, 0, 0.85);
+  -inactive-window-background: rgba(150, 150, 150, 0.9);
+  -inactive-window-border: rgba(0, 0, 0, 0.85);
+}
+
+.panel-bottom .workspace {
+  border-image: url("panel-assets/panel-bottom-item-hover.svg") 4;
+  padding: 1px 0 3px 0;
+}
+
+.panel-bottom .workspace .windows {
+  -inactive-window-background: rgba(120, 120, 120, 0.9);
+  -inactive-window-border: rgba(0, 0, 0, 0.7);
+}
+
+.panel-bottom .workspace:active {
+  border-image: url("panel-assets/panel-bottom-item-active-hover.svg") 4;
+}
+
+.panel-bottom .workspace:active .windows {
+  -active-window-background: rgba(210, 210, 210, 0.9);
+  -active-window-border: rgba(0, 0, 0, 0.85);
+  -inactive-window-background: rgba(150, 150, 150, 0.9);
+  -inactive-window-border: rgba(0, 0, 0, 0.85);
 }
 
 /* ===================================================================
@@ -1728,6 +1817,18 @@ StScrollBar StButton#hhandle:focus {
 .menu-applications-inner-box StScrollView {
   border-image: url("background-assets/dark-bg.svg") 7;
   padding: 0.5em 0.1em;
+}
+
+/* ===================================================================
+   ! Window Quicky List applet
+   ===================================================================*/
+.window-sticky {
+  color: #f0ad4e;
+  font-weight: bold;
+}
+
+.popup-menu-item:active .window-sticky {
+  color: white;
 }
 
 /* ===================================================================
@@ -2806,48 +2907,53 @@ StBoxLayout.applet-box.desktop-capture StBin {
 
 .calc-displayWindow {
   border-image: url("widget-assets/entry-focused.svg") 7;
-  padding: 6px 6px 14px 6px;
+  padding: 8px;
+  padding-top: 4px;
+  padding-bottom: 2.4em;
 }
 
 .calc-displayWindow-rpn {
   border-image: url("widget-assets/entry-focused.svg") 7;
-  padding: 6px 6px 14px 6px;
+  padding: 8px;
+  padding-top: 4px;
 }
 
 .calc-displayText-primary {
-  font-size: 32px;
+  font-size: 32pt;
   color: rgba(255, 255, 255, 0.8);
   text-align: right;
 }
 
 .calc-displayText-secondary {
-  font-size: 9px;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 10pt;
+  color: #f0ad4e;
   text-align: right;
   padding-bottom: 8px;
 }
 
 .calc-displayText-operation {
-  font-size: 24px;
+  color: #f0ad4e;
 }
 
 .calc-displayText-status {
-  font-size: 8px;
+  font-size: 10pt;
   color: rgba(255, 255, 255, 0.4);
 }
 
 .calc-displayText-rpn {
   color: rgba(255, 255, 255, 0.8);
+  font-size: 10pt;
 }
 
 .calc-stackArea {
   height: 85px;
-  padding-top: 0;
+  padding-top: .8em;
+  padding-bottom: 0;
 }
 
 .calc-navigation-box {
   padding: 0 0 0 8px;
-  width: 22px;
+  width: 16px;
   border: none;
 }
 
@@ -2860,9 +2966,11 @@ StBoxLayout.applet-box.desktop-capture StBin {
   border: none;
 }
 
+.calc-navigation-button:hover .calc-navigation-icon {
+  color: #d64937;
+}
+
 .calc-button {
-  width: 38px;
-  height: 32px;
   background-color: transparent;
   background-gradient-direction: none;
   background-gradient-start: transparent;
@@ -2875,6 +2983,8 @@ StBoxLayout.applet-box.desktop-capture StBin {
   font-size: 9pt;
   border-image: url("button-assets/button-primary.svg") 10;
   color: rgba(255, 255, 255, 0.8);
+  width: 3.4em;
+  height: 2.8em;
 }
 
 .calc-button:grayed,
@@ -2882,6 +2992,12 @@ StBoxLayout.applet-box.desktop-capture StBin {
 .calc-button:insensitive {
   border-image: url("button-assets/button-insensitive.svg") 10;
   color: rgba(255, 255, 255, 0.1);
+}
+
+.calc-button:grayed StIcon,
+.calc-button:disabled StIcon,
+.calc-button:insensitive StIcon {
+  color: #444;
 }
 
 .calc-button > StIcon {
@@ -2931,7 +3047,7 @@ StBoxLayout.applet-box.desktop-capture StBin {
 }
 
 .calc-button-padding {
-  padding: 2px;
+  padding: .2em;
 }
 
 /* ===================================================================

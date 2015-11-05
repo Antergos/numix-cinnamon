@@ -2,74 +2,50 @@
    ! Sound Applet
    ===================================================================*/
 
-.sound-button {
-    padding: 6px;
-    @include size(22px);
-    @include btn-primary;
+.sound-player {
+    padding: 0 0 1px 0;
 
-    &-container {
-        padding-right: 1px;
-        padding-left: 1px;
-    }
-}
+    > StBoxLayout:first-child {
+        padding: .4em 1.3em .6em 1.3em;
+        spacing: .4em;
+        font-weight: bold;
+        font-size: 10pt;
 
-.sound-track-infos {
-    padding: 5px;
-    padding-left: 15px;
-}
-
-.sound-track-info {
-    padding-top: 2px;
-    padding-bottom: 2px;
-
-    StIcon {
-        icon-size: 16px;
-        color: $icon-primary;
+        StButton:small {
+            @include size(16px);
+            padding: 1px;
+        }
     }
 
-    StLabel {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-}
-
-.sound-track-box {
-    max-width: 220px;
-}
-
-.sound-track-cover {
-    border-image: url("background-assets/submenu-bg.svg") 9;
-    padding: 20px;
-}
-
-.sound-seek-box {
-   padding-left: 15px;
-
-    StLabel {
-        padding-top: 3px;
+    &-generic-coverart {
+        padding: 0 2px;
     }
 
-    StIcon {
-        icon-size: 16px;
-        color: $icon-primary;
+    &-overlay {
+        border-image: url("background-assets/sound-applet-album-overlay.svg") 7;
+        @include size(290px, 70px);
+        padding: 1.3em 1.3em 2.5em 1.3em;
+        spacing: .5em;
+        color: $text-primary;
+
+        StButton {
+            @include btn-primary;
+            @include btn-width(small);
+        }
+
+        StBoxLayout {
+            padding-top: .2em;
+            spacing: .4em;
+        }
     }
-}
 
-.sound-seek-slider { width: 170px; }
-
-.sound-volume-menu-item {
-    padding: .4em 1.3em;
-
-    StIcon {
-        icon-size: 16px;
-        padding-left: 8px;
-        padding-right: 8px;
-        color: $icon-primary;
+    .slider {
+        border-image: none;
+        padding: 0;
+        height: .5em;
+        -slider-height: .4em;
+        -slider-background-color: #333;
+        -slider-active-background-color: $accent-primary;
+        -slider-handle-radius: 0;
     }
-}
-
-.sound-playback-control {
-    padding: 0;
-    padding-top: 5px;
-    padding-bottom: 10px;
 }

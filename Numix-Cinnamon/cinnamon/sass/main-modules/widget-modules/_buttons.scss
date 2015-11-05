@@ -20,6 +20,10 @@
     &:insensitive {
         border-image: url("button-assets/button-insensitive.svg") 10;
         color: $text-disabled;
+
+        StIcon {
+            color: $icon-disabled;
+        }
     }
 
     > StIcon {

@@ -49,3 +49,20 @@
         }
     }
 }
+
+/* This styles the window-list preview and window name
+   in "cover" and "timeline" alt-tab modes */
+.switcher-list {
+    border-image: url("background-assets/tooltip.svg") 7;
+    color: $text-primary;
+    padding: 0 3px;
+    font-weight: bold;
+
+    > StBoxLayout {
+        spacing: .4em;
+
+        > StBoxLayout {
+            spacing: .4em;
+        }
+    }
+}

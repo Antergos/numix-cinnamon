@@ -1,36 +1,65 @@
 /* ===================================================================
-     ! Workspace Switcher
-     ===================================================================*/
+   ! Number-mode Workspace Switcher applet
+   ===================================================================*/
 
-#workspaceSwitcher { spacing: 0; }
+.workspace-switcher {
+    spacing: 0;
+}
 
 .workspace-button {
-        padding-left: 8px;
-        padding-right: 8px;
-        color: $text-secondary;
-        font-weight: bold;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: $text-secondary;
+    font-weight: bold;
 }
 
 /* Different images used in top & bottom panels. */
 @each $v in panel-top, panel-bottom {
-        .#{$v} {
-                .workspace-button:outlined {
-                    border-image: url("panel-assets/#{$v}-item-active.svg") 4;
-                    color: $text-active;
-                }
-
-                .workspace-button:hover {
-                    border-image: url("panel-assets/#{$v}-item-hover.svg") 4;
-                    color: $text-primary;
-                }
-
-                .workspace-button:outlined:hover {
-                    border-image: url("panel-assets/#{$v}-item-active-hover.svg") 4;
-                }
+    .#{$v} {
+        .workspace-button:outlined {
+            border-image: url("panel-assets/#{$v}-item-active.svg") 4;
+            color: $text-active;
         }
+
+        .workspace-button:hover {
+            border-image: url("panel-assets/#{$v}-item-hover.svg") 4;
+            color: $text-primary;
+        }
+
+        .workspace-button:outlined:hover {
+            border-image: url("panel-assets/#{$v}-item-active-hover.svg") 4;
+        }
+    }
 }
 
-/* Items in the bottom panel are shifted by 1px down.
-     This fixes it for this applet specifically.
-     The global fix is in the panel module */
-.panel-bottom .workspace-button { padding-top: 1px; }
+/* ===================================================================
+   ! Visual-mode Workspace Switcher applet
+   ===================================================================*/
+.workspace-graph {
+    padding: 0 4px;
+    spacing: 3px;
+}
+
+/* Different images/paddings used in top & bottom panels. */
+@each $v in panel-top, panel-bottom {
+    .#{$v} .workspace {
+        border-image: url("panel-assets/#{$v}-item-hover.svg") 4;
+        padding: if($v == panel-top, 0 0 3px 0, 1px 0 3px 0);
+
+        .windows {
+            -inactive-window-background: rgba(120, 120, 120, .9);
+            -inactive-window-border: rgba(0, 0, 0, .7);
+        }
+    }
+
+    .#{$v} .workspace:active {
+        border-image: url("panel-assets/#{$v}-item-active-hover.svg") 4;
+
+        .windows {
+            -active-window-background: rgba(210, 210 , 210, .9);
+            -active-window-border: rgba(0, 0, 0, .85);
+            -inactive-window-background: rgba(150, 150, 150, .9);
+            -inactive-window-border: rgba(0, 0, 0, .85w);
+        }
+    }
+}

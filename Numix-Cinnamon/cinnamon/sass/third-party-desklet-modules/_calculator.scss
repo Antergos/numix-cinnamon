@@ -2,54 +2,63 @@
    ! Calculator
    ===================================================================*/
 
-.calc-mainBox { padding: 0; }
+.calc-mainBox {
+    padding: 0;
+}
 
-.calc-displayArea { padding: 0; }
+.calc-displayArea {
+    padding: 0;
+}
 
 .calc-displayWindow {
-    border-image: url("widget-assets/entry-focused.svg") 7;
-    padding: 6px 6px 14px 6px;
+    border-image: url("widget-assets/entry-focused.svg") 7;;
+    padding: 8px;
+    padding-top: 4px;
+    padding-bottom: 2.4em;
 
     &-rpn {
         border-image: url("widget-assets/entry-focused.svg") 7;
-        padding: 6px 6px 14px 6px;
+        padding: 8px;
+        padding-top: 4px;
     }
 }
 
 .calc-displayText-primary {
-    font-size: 32px;
+    font-size: 32pt;
     color: $text-primary;
     text-align: right;
 }
 
 .calc-displayText-secondary {
-    font-size: 9px;
-    color: $text-secondary;
+    font-size: 10pt;
+    color: $text-info;
     text-align: right;
     padding-bottom: 8px;
 }
 
 .calc-displayText-operation {
-    font-size: 24px;
+    color: $text-info;
 }
 
 .calc-displayText-status {
-    font-size: 8px;
+    font-size: 10pt;
     color: $text-secondary;
 }
 
 .calc-displayText-rpn {
     color: $text-primary;
+    font-size: 10pt;
 }
 
 .calc-stackArea {
     height: 85px;
-    padding-top: 0;
+    padding-top: .8em;
+    padding-bottom: 0;
 }
 
 .calc-navigation-box {
     padding: 0 0 0 8px;
-    width: 22px;
+    width: 16px;
     border: none;
 }
 
@@ -58,12 +67,19 @@
     icon-size: 16px;
 }
 
-.calc-navigation-button { border: none; }
+.calc-navigation-button {
+    border: none;
 
+    &:hover .calc-navigation-icon {
+        color: $accent-primary;
+    }
+}
 
 .calc-button {
-    @include size(38px, 32px);
     @include btn-primary;
+    @include size(3.4em, 2.8em);
 
-    &-padding { padding: 2px; }
+    &-padding {
+        padding: .2em;
+    }
 }

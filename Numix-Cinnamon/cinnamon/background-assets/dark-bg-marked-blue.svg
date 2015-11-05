@@ -16,7 +16,7 @@
    id="svg11300"
    sodipodi:version="0.32"
    inkscape:version="0.91 r"
-   sodipodi:docname="keyboard-bg.svg"
+   sodipodi:docname="dark-bg-marked-blue.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
    style="display:inline;enable-background:new">
@@ -29,9 +29,9 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="20.594485"
-     inkscape:cx="14.293535"
-     inkscape:cy="10.98031"
+     inkscape:zoom="14.5625"
+     inkscape:cx="8.5385046"
+     inkscape:cy="8.4556352"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
@@ -46,7 +46,7 @@
      inkscape:snap-nodes="true"
      inkscape:snap-bbox="true"
      gridtolerance="10000"
-     inkscape:object-nodes="false"
+     inkscape:object-nodes="true"
      inkscape:snap-grids="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -89,7 +89,7 @@
         <dc:source />
         <cc:license
            rdf:resource="" />
-        <dc:title />
+        <dc:title></dc:title>
         <dc:subject>
           <rdf:Bag />
         </dc:subject>
@@ -130,18 +130,33 @@
      id="layer1"
      transform="translate(0,-276)">
     <rect
+       rx="2"
+       ry="2"
        y="276"
-       x="0"
-       height="1"
+       x="8.8817842e-16"
+       height="24"
        width="24"
        id="rect3005"
-       style="fill:#484848;fill-opacity:1;stroke:none" />
+       style="opacity:0.55;fill:#000000;fill-opacity:1;stroke:none" />
     <rect
-       style="fill:#2d2d2d;fill-opacity:1;stroke:none"
+       style="fill:#232323;fill-opacity:1;stroke:none"
        id="rect3003"
-       width="24"
-       height="23"
-       x="0"
-       y="277" />
+       width="22"
+       height="22"
+       x="1"
+       y="1"
+       transform="translate(0,276)"
+       ry="1"
+       rx="1" />
+    <path
+       style="fill:#378fd6;fill-opacity:1;stroke:none"
+       d="M 2 0 C 0.892 0 -5.1014965e-18 0.892 0 2 L 0 22 C 0 23.108 0.892 24 2 24 L 2 0 z "
+       transform="translate(0,276)"
+       id="rect2997" />
+    <path
+       style="opacity:0.1;fill:#000000;fill-opacity:1;stroke:none"
+       d="M 2 0 C 0.892 0 0 0.892 0 2 L 0 22 C 0 23.108 0.892 24 2 24 L 2 23 C 1.446 23 1 22.554 1 22 L 1 2 C 1 1.446 1.446 1 2 1 L 2 0 z "
+       transform="translate(0,276)"
+       id="rect6331" />
   </g>
 </svg>

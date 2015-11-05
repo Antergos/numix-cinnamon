@@ -16,7 +16,7 @@
    id="svg11300"
    sodipodi:version="0.32"
    inkscape:version="0.91 r"
-   sodipodi:docname="keyboard-bg.svg"
+   sodipodi:docname="sound-applet-album-overlay.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
    style="display:inline;enable-background:new">
@@ -30,7 +30,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="20.594485"
-     inkscape:cx="14.293535"
+     inkscape:cx="6.0388979"
      inkscape:cy="10.98031"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -135,9 +135,9 @@
        height="1"
        width="24"
        id="rect3005"
-       style="fill:#484848;fill-opacity:1;stroke:none" />
+       style="fill:#484848;fill-opacity:1;stroke:none;opacity:0.85" />
     <rect
-       style="fill:#2d2d2d;fill-opacity:1;stroke:none"
+       style="fill:#2d2d2d;fill-opacity:1;stroke:none;opacity:0.98"
        id="rect3003"
        width="24"
        height="23"

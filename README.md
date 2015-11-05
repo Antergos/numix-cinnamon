@@ -1,10 +1,18 @@
-###A theme for cinnamon 2.6
+###Numix for cinnamon
 
 ---
 
 ####Installation
 
-You can install this theme from within your theme settings.
+You can install the latest version of this theme from within your theme settings.
+
+---
+
+####Compatibility
+
+The latest version of this theme is on the master branch, and it supports cinnamon version `2.8`.
+
+For older versions, check the available [releases](../../releases).
 
 ---
 

@@ -15,6 +15,7 @@
     &-with-borders-and-header {
         border-image: url("background-assets/desklet-body.svg") 9;
         color: $text-primary;
+        font-weight: bold;
         padding: 5px;
     }
 

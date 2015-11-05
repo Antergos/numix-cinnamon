@@ -27,6 +27,11 @@
         color: $icon-primary;
     }
 
+    &-arrow {
+        @include size(10px);
+        padding:0;
+    }
+
     &-item {
         padding: .4em 1.3em;
         spacing: .8em;
@@ -58,7 +63,6 @@
         color: rgba(0, 0, 0, 0);
     }
 }
-
 
 .popup-sub-menu {
     border-image: url("background-assets/submenu-bg.svg") 9;
@@ -114,6 +118,12 @@
     }
 }
 
-.popup-subtitle-menu-item {}
+.popup-inactive-menu-item {
+    color: $text-secondary;
+}
 
-.popup-inactive-menu-item { color: $text-secondary; }
+/* used mainly for the notif-applet */
+.popup-menu-item .popup-subtitle-menu-item {
+    font-weight: bold;
+    color: $text-active;
+}

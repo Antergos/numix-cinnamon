@@ -137,7 +137,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ssccsss" />
     <path
-       style="fill:#232323;fill-opacity:1;stroke:none"
+       style="fill:#444444;fill-opacity:1;stroke:none"
        d="M 2,1 C 1.446,1 1,1.446 1,2 L 1,24 23,24 23,2 C 23,1.446 22.554,1 22,1 Z"
        transform="translate(0,276)"
        id="rect3003"

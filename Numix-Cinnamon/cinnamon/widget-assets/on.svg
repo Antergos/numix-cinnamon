@@ -150,7 +150,7 @@
        height="12"
        width="26"
        id="rect4708"
-       style="opacity:1;fill:#232323;fill-opacity:1" />
+       style="opacity:1;fill:#444444;fill-opacity:1" />
     <path
        style="fill:#1a80b6;fill-opacity:1;stroke:none"
        d="m 26,287 c 0.554,0 1,0.446 1,1 l 0,10 c 0,0.554 -0.446,1 -1,1 l -12,0 0,-12 z"

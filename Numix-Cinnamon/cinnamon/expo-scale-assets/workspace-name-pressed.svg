@@ -130,7 +130,7 @@
      id="layer1"
      transform="translate(0,-276)">
     <path
-       style="fill:#d64937;fill-opacity:1;stroke:none"
+       style="fill:#1a80b6;fill-opacity:1;stroke:none"
        d="M 0,0 0,8 2,8 2,2 8,2 8,0 z"
        transform="translate(0,276)"
        id="rect3264"
@@ -141,15 +141,15 @@
        inkscape:connector-curvature="0"
        id="use3386"
        d="m 24,300 0,-8 -2,0 0,6 -6,0 0,2 z"
-       style="fill:#d64937;fill-opacity:1;stroke:none" />
+       style="fill:#1a80b6;fill-opacity:1;stroke:none" />
     <path
        sodipodi:nodetypes="ccccccc"
        inkscape:connector-curvature="0"
        id="use3390"
        d="m 0,300 0,-8 2,0 0,6 6,0 0,2 z"
-       style="fill:#d64937;fill-opacity:1;stroke:none" />
+       style="fill:#1a80b6;fill-opacity:1;stroke:none" />
     <path
-       style="fill:#d64937;fill-opacity:1;stroke:none"
+       style="fill:#1a80b6;fill-opacity:1;stroke:none"
        d="m 24,276 -8,0 0,2 6,0 0,6 2,0 z"
        id="use3392"
        inkscape:connector-curvature="0"

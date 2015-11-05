@@ -137,7 +137,7 @@
        height="22"
        width="22"
        id="rect3003"
-       style="fill:#d64937;fill-opacity:1;stroke:none" />
+       style="fill:#1a80b6;fill-opacity:1;stroke:none" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none;opacity:0.1"
        d="M 3 1 C 1.892 1 1 1.892 1 3 L 1 21 C 1 22.108 1.892 23 3 23 L 21 23 C 22.108 23 23 22.108 23 21 L 23 3 C 23 1.892 22.108 1 21 1 L 3 1 z M 4 2 L 20 2 C 21.108 2 22 2.892 22 4 L 22 20 C 22 21.108 21.108 22 20 22 L 4 22 C 2.892 22 2 21.108 2 20 L 2 4 C 2 2.892 2.892 2 4 2 z "

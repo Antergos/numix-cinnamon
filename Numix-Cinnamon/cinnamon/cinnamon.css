@@ -320,6 +320,10 @@ StScrollBar StButton#hhandle:focus {
   color: white;
 }
 
+.popup-sub-menu .popup-slider-menu-item {
+  border-image: url("widget-assets/slider--submenu.svg") 9 32 8 8;
+}
+
 .popup-submenu-menu-item:open {
   background-color: transparent;
 }

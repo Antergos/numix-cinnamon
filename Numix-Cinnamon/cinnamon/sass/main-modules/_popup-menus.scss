@@ -132,3 +132,12 @@
     font-weight: bold;
     color: $text-active;
 }
+
+.popup-device-menu-item {
+    spacing: .5em;
+
+    .popup-inactive-menu-item {
+        color: $text-info;
+    }
+}
+

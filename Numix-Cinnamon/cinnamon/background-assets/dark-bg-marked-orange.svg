@@ -149,7 +149,7 @@
        ry="1"
        rx="1" />
     <path
-       style="fill:#1a80b6;fill-opacity:1;stroke:none"
+       style="fill:#1D90CD;fill-opacity:1;stroke:none"
        d="M 2 0 C 0.892 0 -5.1014965e-18 0.892 0 2 L 0 22 C 0 23.108 0.892 24 2 24 L 2 0 z "
        transform="translate(0,276)"
        id="rect2997" />

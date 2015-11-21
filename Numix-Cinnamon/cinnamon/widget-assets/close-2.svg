@@ -154,7 +154,7 @@
      id="layer1"
      transform="translate(0,-280)">
     <path
-       style="opacity:1;fill:#1a80b6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#1D90CD;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 12,284 a 8.0000004,8.0000004 0 0 0 -8,8 8.0000004,8.0000004 0 0 0 8,8 8.0000004,8.0000004 0 0 0 8,-8 8.0000004,8.0000004 0 0 0 -8,-8 z m -4,4 1.5019531,0 L 12,290.49805 14.498047,288 16,288 16,289.50195 13.501953,292 16,294.49805 16,296 14.498047,296 12,293.50195 9.5019531,296 8,296 8,294.49805 10.498047,292 8,289.50195 8,288 Z"
        id="path4177"
        inkscape:connector-curvature="0" />

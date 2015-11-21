@@ -7,7 +7,7 @@ stage {
 }
 
 .cinnamon-link {
-  color: #1a80b6;
+  color: #1D90CD;
   font-weight: normal;
 }
 
@@ -107,7 +107,7 @@ StScrollBar StButton#hhandle:focus {
   caret-color: rgba(255, 255, 255, 0.8);
   caret-size: 1px;
   selected-color: white;
-  selection-background-color: #1a80b6;
+  selection-background-color: #1D90CD;
 }
 
 .popup-menu StEntry StIcon,
@@ -209,7 +209,7 @@ StScrollBar StButton#hhandle:focus {
   -slider-height: 2px;
   -slider-background-color: transparent;
   -slider-border-color: transparent;
-  -slider-active-background-color: #1a80b6;
+  -slider-active-background-color: #1D90CD;
   -slider-active-border-color: transparent;
   -slider-border-width: 2px;
   -slider-handle-radius: 4px;
@@ -339,7 +339,7 @@ StScrollBar StButton#hhandle:focus {
   -slider-height: 2px;
   -slider-background-color: transparent;
   -slider-border-color: transparent;
-  -slider-active-background-color: #1a80b6;
+  -slider-active-background-color: #1D90CD;
   -slider-active-border-color: transparent;
   -slider-border-width: 2px;
   -slider-handle-radius: 4px;
@@ -417,7 +417,7 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .panel-dummy:entered {
-  background-color: #1a80b6;
+  background-color: #1D90CD;
 }
 
 /* This styles the systray items */
@@ -524,11 +524,11 @@ StScrollBar StButton#hhandle:focus {
 .expo-workspaces-name-entry:focus,
 .expo-workspaces-name-entry#selected:focus {
   border-image: url("expo-scale-assets/workspace-name-pressed.svg") 12;
-  color: #1a80b6;
+  color: #1D90CD;
   selected-color: rgba(255, 255, 255, 0.8);
   caret-color: rgba(255, 255, 255, 0.8);
   caret-size: 1px;
-  selection-background-color: #1a80b6;
+  selection-background-color: #1D90CD;
 }
 
 .workspace-close-button {
@@ -1564,7 +1564,7 @@ StScrollBar StButton#hhandle:focus {
   height: .5em;
   -slider-height: .4em;
   -slider-background-color: #333;
-  -slider-active-background-color: #1a80b6;
+  -slider-active-background-color: #1D90CD;
   -slider-handle-radius: 0;
 }
 
@@ -1882,7 +1882,7 @@ StScrollBar StButton#hhandle:focus {
 
 .osd-window .level {
   height: 5px;
-  color: #1a80b6;
+  color: #1D90CD;
 }
 
 .workspace-osd {
@@ -1959,7 +1959,7 @@ StScrollBar StButton#hhandle:focus {
   background-gradient-direction: vertical;
   background-gradient-start: rgba(255, 255, 255, 0);
   background-gradient-end: rgba(255, 255, 255, 0);
-  color: #1a80b6;
+  color: #1D90CD;
   text-decoration: underline;
 }
 
@@ -2726,7 +2726,7 @@ StBoxLayout.applet-box.desktop-capture StBin {
 }
 
 .sticky-button-selected * {
-  color: #1a80b6;
+  color: #1D90CD;
 }
 
 .sticky-button-box {
@@ -2804,7 +2804,7 @@ StBoxLayout.applet-box.desktop-capture StBin {
   caret-color: rgba(255, 255, 255, 0.8);
   caret-size: 1px;
   selected-color: white;
-  selection-background-color: #1a80b6;
+  selection-background-color: #1D90CD;
 }
 
 .sticky-text-box StIcon {
@@ -2837,7 +2837,7 @@ StBoxLayout.applet-box.desktop-capture StBin {
   selected-color: rgba(255, 255, 255, 0.8);
   caret-color: rgba(255, 255, 255, 0.8);
   caret-size: 1px;
-  selection-background-color: #1a80b6;
+  selection-background-color: #1D90CD;
 }
 
 /* ===================================================================
@@ -2971,7 +2971,7 @@ StBoxLayout.applet-box.desktop-capture StBin {
 }
 
 .calc-navigation-button:hover .calc-navigation-icon {
-  color: #1a80b6;
+  color: #1D90CD;
 }
 
 .calc-button {

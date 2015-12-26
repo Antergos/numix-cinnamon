@@ -1052,7 +1052,8 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .run-dialog-completion-box {
-    font-size: 10px;
+  font-size: 10px;
+  padding: 1em .7em;
 }
 
 .run-dialog-label {

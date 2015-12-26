@@ -1413,11 +1413,13 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .panel-top .window-list-item-demands-attention {
-    border-image: url("panel-assets/panel-top-item-attention.svg") 4;
+  border-image: url("panel-assets/panel-top-item-attention.svg") 4;
+  color: white;
 }
 
 .panel-top .window-list-item-demands-attention:hover {
-    border-image: url("panel-assets/panel-top-item-attention-hover.svg") 4;
+  border-image: url("panel-assets/panel-top-item-attention-hover.svg") 4;
+  color: white;
 }
 
 .panel-bottom .window-list-item-box:hover {
@@ -1439,11 +1441,13 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .panel-bottom .window-list-item-demands-attention {
-    border-image: url("panel-assets/panel-bottom-item-attention.svg") 4;
+  border-image: url("panel-assets/panel-bottom-item-attention.svg") 4;
+  color: white;
 }
 
 .panel-bottom .window-list-item-demands-attention:hover {
-    border-image: url("panel-assets/panel-bottom-item-attention-hover.svg") 4;
+  border-image: url("panel-assets/panel-bottom-item-attention-hover.svg") 4;
+  color: white;
 }
 
 /* This styles the window-list preview and window name

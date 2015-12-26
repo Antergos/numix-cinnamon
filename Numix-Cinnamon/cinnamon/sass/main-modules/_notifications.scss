@@ -2,6 +2,15 @@
    ! Notifications
    ===================================================================*/
 
+/*
+    The highlighter gets it's opacity from the
+    color property
+    Tweak default $link color to fix
+*/
+.url-highlighter {
+    link-color: saturate(lighten($link, 12%), 55%);
+}
+
 #notification {
     border-image: url("background-assets/popup.svg") 7;
     padding: 1.3em;

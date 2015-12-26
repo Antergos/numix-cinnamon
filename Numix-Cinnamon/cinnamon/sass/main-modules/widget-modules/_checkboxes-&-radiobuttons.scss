@@ -2,7 +2,7 @@
    ! Checkboxes + Radio buttons
    ===================================================================*/
 
-@each $v in checkbox, radiobutton {
+@each $v in check-box, radiobutton {
     .#{$v} {
         CinnamonGenericContainer {
             spacing: .2em;

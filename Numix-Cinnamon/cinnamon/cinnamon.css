@@ -148,31 +148,31 @@ StScrollBar StButton#hhandle:focus {
 /* ===================================================================
    ! Checkboxes + Radio buttons
    ===================================================================*/
-.checkbox CinnamonGenericContainer {
-    spacing: .2em;
-    min-height: 16px;
+.check-box CinnamonGenericContainer {
+  spacing: .2em;
+  min-height: 16px;
 }
 
-.checkbox StLabel {
-    padding-top: 1px;
+.check-box StLabel {
+  padding-top: 1px;
 }
 
-.checkbox StBin {
-    width: 16px;
-    height: 16px;
-    background-image: url("widget-assets/checkbox.svg");
+.check-box StBin {
+  width: 16px;
+  height: 16px;
+  background-image: url("widget-assets/check-box.svg");
 }
 
-.checkbox:focus StBin {
-    background-image: url("widget-assets/checkbox-focused.svg");
+.check-box:focus StBin {
+  background-image: url("widget-assets/check-box-focused.svg");
 }
 
-.checkbox:checked StBin {
-    background-image: url("widget-assets/checkbox-checked.svg");
+.check-box:checked StBin {
+  background-image: url("widget-assets/check-box-checked.svg");
 }
 
-.checkbox:focus:checked {
-    background-image: url("widget-assets/checkbox-focused-checked.svg");
+.check-box:focus:checked {
+  background-image: url("widget-assets/check-box-focused-checked.svg");
 }
 
 .radiobutton CinnamonGenericContainer {

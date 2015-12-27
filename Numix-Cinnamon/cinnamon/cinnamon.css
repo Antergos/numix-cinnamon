@@ -704,14 +704,25 @@ StScrollBar StButton#hhandle:focus {
 }
 
 #notification-body {
-    font-weight: normal;
-    font-size: 9pt;
-    padding: 0.8em 0 0.6em 0;
-    border-top: 1px rgba(0, 0, 0, 0.05);
+  font-weight: normal;
+  font-size: 9pt;
+  padding: .5em 0;
 }
 
 #notification-actions {
     spacing: .2em;
+}
+
+#notification.notification-with-image {
+  min-height: 159px;
+}
+
+.popup-menu-content #notification.notification-with-image {
+  min-height: 172px;
+}
+
+#notification.notification-with-image #notification-body {
+  padding: 0;
 }
 
 .notification-button,
@@ -846,7 +857,8 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .popup-menu-content #notification.notification-with-image {
-    border-image: url("background-assets/dark-bg-marked-green.svg") 7;
+  border-image: url("background-assets/dark-bg-marked-green.svg") 7;
+  padding-bottom: .8em;
 }
 
 /* ===================================================================

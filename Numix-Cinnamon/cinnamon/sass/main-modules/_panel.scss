@@ -2,7 +2,7 @@
    ! Panel
    ===================================================================*/
 
-// Top & bottom panels use different images
+/* Top & bottom panels use different images*/
 
 /*@each $v in panel-top, panel-bottom {
     .#{$v} {

@@ -2,30 +2,6 @@
    ! Panel
    ===================================================================*/
 
-/* Top & bottom panels use different images*/
-
-/*@each $v in panel-top, panel-bottom {
-    .#{$v} {
-        border-image: url("panel-assets/#{$v}.svg") 4;
-        font-size: 9pt;
-        height: 25px;
-
-        &:highlight {
-            border-image: url("panel-assets/#{$v}-highlight.svg") 4;
-        }
-
-        #panelLeft:dnd {
-            border-image: url("panel-assets/DND-#{$v}-left.svg") 4;
-        }
-        #panelCenter:dnd {
-            border-image: url("panel-assets/DND-#{$v}-center.svg") 4;
-        }
-        #panelRight:dnd {
-            border-image: url("panel-assets/DND-#{$v}-right.svg") 4;
-        }
-    }
-}*/
-
 //
 // Panel
 //

@@ -18,10 +18,10 @@
             background-gradient-start: rgba(255, 0, 0, 0.05);
             background-gradient-end: rgba(255, 40, 79, 0.42);
         }
-        &:ltr · {
+        &:ltr {
             padding-right: 4px;
         }
-        &:rtl · {
+        &:rtl {
             padding-left: 4px;
         }
     }
@@ -33,11 +33,11 @@
             background-gradient-start: rgba(0, 0, 255, 0.05);
             background-gradient-end: rgba(18, 21, 255, 0.42);
         }
-        &:ltr · {
+        &:ltr {
             padding-left: 4px;
             spacing: 0px;
         }
-        &:rtl · {
+        &:rtl {
             padding-right: 4px;
             spacing: 0px;
         }

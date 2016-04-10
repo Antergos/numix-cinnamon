@@ -56,8 +56,8 @@
 
     // $bg paramteres in this case are strings, not css colors
     // Quote them to prevent conversion to hex values
-    $bg: quote($bg);
-    $bg-focus: quote($bg-focus);
+    $bg: #{$bg};
+    $bg-focus: #{$bg-focus};
 
 
     // Include common properties

@@ -2,6 +2,15 @@
    ! Notifications
    ===================================================================*/
 
+/*
+    The highlighter gets it's opacity from the
+    color property
+    Tweak default $link color to fix
+*/
+.url-highlighter {
+    link-color: saturate(lighten($link, 12%), 55%);
+}
+
 #notification {
     border-image: url("background-assets/popup.svg") 7;
     padding: 1.3em;
@@ -34,12 +43,24 @@
     &-body {
         font-weight: normal;
         font-size: 9pt;
-        padding: .8em 0 .6em 0 ;
-        border-top: 1px alpha(#000, .05);
+        padding: .5em 0;
     }
 
     &-actions {
         spacing: .2em;
+    }
+
+    // min-height hack to prevent image stretching
+    &.notification-with-image {
+        min-height: 159px;
+
+        .popup-menu-content & {
+            min-height: 172px;
+        }
+
+        #notification-body {
+            padding: 0;
+        }
     }
 }
 
@@ -80,6 +101,7 @@
 
         &.notification-with-image {
             border-image: url("background-assets/dark-bg-marked-green.svg") 7;
+            padding-bottom: .8em;
         }
     }
 }

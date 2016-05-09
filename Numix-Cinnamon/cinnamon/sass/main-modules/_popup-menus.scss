@@ -7,9 +7,9 @@
 
     &-boxpointer {
         padding: 0;
-        -arrow-background-color: #2d2d2d;
+        -arrow-background-color: #444444;
         -arrow-border-width: 1px;
-        -arrow-border-color: #484848;
+        -arrow-border-color: #515151;
         -arrow-border-radius: 2px;
         -arrow-base: 16px;
         -arrow-rise: 8px;
@@ -75,13 +75,14 @@
     padding: 12px 0;
     color: $text-primary;
 
-    .popup-menu-item {
-        padding-left: 2.1em;
-    }
-
     .popup-menu-item:active {
         border-image: url("background-assets/hover.svg") 9;
         color: $text-active;
+    }
+
+    // FIX for strange padding in "StDrawingArea"
+    .popup-slider-menu-item {
+        border-image: url("widget-assets/slider--submenu.svg") 9 32 8 8;
     }
 }
 
@@ -131,3 +132,12 @@
     font-weight: bold;
     color: $text-active;
 }
+
+.popup-device-menu-item {
+    spacing: .5em;
+
+    .popup-inactive-menu-item {
+        color: $text-info;
+    }
+}
+

@@ -42,10 +42,12 @@
 
         .window-list-item-demands-attention {
             border-image: url("panel-assets/#{$v}-item-attention.svg") 4;
+            color: $text-active;
         }
 
         .window-list-item-demands-attention:hover {
             border-image: url("panel-assets/#{$v}-item-attention-hover.svg") 4;
+            color: $text-active;
         }
     }
 }

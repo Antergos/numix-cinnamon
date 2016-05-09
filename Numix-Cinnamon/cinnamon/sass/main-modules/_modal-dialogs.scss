@@ -64,7 +64,10 @@
         }
     }
 
-    &-completion-box { font-size: 10px; }
+    &-completion-box {
+        font-size: 10pt;
+        padding: 1em .7em;
+    }
 
     &-label { font-size: 0; }
 

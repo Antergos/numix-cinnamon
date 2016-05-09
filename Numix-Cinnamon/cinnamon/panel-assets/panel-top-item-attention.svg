@@ -11,12 +11,12 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="90.000000"
    inkscape:export-xdpi="90.000000"
-   width="16"
-   height="16"
+   width="24"
+   height="24"
    id="svg11300"
    sodipodi:version="0.32"
-   inkscape:version="0.91 r"
-   sodipodi:docname="checkbox-focused.svg"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="hover.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
    style="display:inline;enable-background:new">
@@ -29,16 +29,16 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="15.431818"
-     inkscape:cx="-17.452136"
-     inkscape:cy="8.3342918"
+     inkscape:zoom="20.005229"
+     inkscape:cx="4.3270062"
+     inkscape:cy="12"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
      inkscape:window-width="1600"
-     inkscape:window-height="875"
+     inkscape:window-height="846"
      inkscape:window-x="0"
      inkscape:window-y="25"
      width="400px"
@@ -46,12 +46,12 @@
      inkscape:snap-nodes="true"
      inkscape:snap-bbox="true"
      gridtolerance="10000"
-     inkscape:object-nodes="true"
+     inkscape:object-nodes="false"
      inkscape:snap-grids="true"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-maximized="1"
-     inkscape:bbox-nodes="true"
+     inkscape:bbox-nodes="false"
      inkscape:bbox-paths="false"
      inkscape:snap-bbox-edge-midpoints="false"
      inkscape:snap-bbox-midpoints="false"
@@ -62,8 +62,7 @@
      guidecolor="#ff0b00"
      guideopacity="1"
      guidehicolor="#001aff"
-     guidehiopacity="0.49803922"
-     inkscape:snap-smooth-nodes="true">
+     guidehiopacity="0.49803922">
     <inkscape:grid
        type="xygrid"
        id="grid3123"
@@ -90,7 +89,7 @@
         <dc:source />
         <cc:license
            rdf:resource="" />
-        <dc:title />
+        <dc:title></dc:title>
         <dc:subject>
           <rdf:Bag />
         </dc:subject>
@@ -129,24 +128,13 @@
      inkscape:groupmode="layer"
      inkscape:label="Base"
      id="layer1"
-     transform="translate(0,-284)">
+     transform="translate(0,-276)">
     <rect
-       rx="2"
-       ry="2"
-       y="284"
+       style="fill:#d64937;fill-opacity:1;stroke:none"
+       id="rect2997"
+       width="24"
+       height="24"
        x="0"
-       height="16"
-       width="16"
-       id="rect2999"
-       style="opacity:0.5;fill:#484848;fill-opacity:1;stroke:none" />
-    <rect
-       style="fill:#2d2d2d;fill-opacity:1;stroke:none"
-       id="rect3769"
-       width="14"
-       height="14"
-       x="1"
-       y="285"
-       ry="1"
-       rx="1" />
+       y="276" />
   </g>
 </svg>

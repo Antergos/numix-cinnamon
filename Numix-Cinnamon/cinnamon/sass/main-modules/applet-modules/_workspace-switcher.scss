@@ -56,10 +56,10 @@
         border-image: url("panel-assets/#{$v}-item-active-hover.svg") 4;
 
         .windows {
-            -active-window-background: rgba(210, 210 , 210, .9);
+            -active-window-background: rgba(210, 210, 210, .9);
             -active-window-border: rgba(0, 0, 0, .85);
             -inactive-window-background: rgba(150, 150, 150, .9);
-            -inactive-window-border: rgba(0, 0, 0, .85w);
+            -inactive-window-border: rgba(0, 0, 0, .85);
         }
     }
 }

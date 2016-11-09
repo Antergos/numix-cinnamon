@@ -242,6 +242,21 @@ StScrollBar StButton#hhandle:focus {
 }
 
 /* ===================================================================
+   ! Menu
+   ===================================================================*/
+.menu {
+    background-color: #444;
+    color: rgba(255, 255, 255, 0.8);
+    border-width: 0;
+    border-radius: 0;
+    min-width: 100px;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.85); }
+.menu .popup-menu-content {
+   border-image: url("background-assets/popup-inside.svg") 9;
+   padding: .7em 0;
+   color: rgba(255, 255, 255, 0.8); }
+
+/* ===================================================================
    ! Popup Menus
    ===================================================================*/
 .popup-menu {

@@ -286,8 +286,7 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .popup-menu-arrow {
-    width: 10px;
-    height: 10px;
+    icon-size: 16px;
     padding: 0;
 }
 

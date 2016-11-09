@@ -75,6 +75,7 @@ StScrollBar StButton#hhandle:focus {
    ===================================================================*/
 .popup-menu StEntry,
 .modal-dialog StEntry,
+.menu-search-box StEntry,
 #notification StEntry {
     background-gradient-direction: vertical;
     background-gradient-start: transparent;
@@ -98,6 +99,9 @@ StScrollBar StButton#hhandle:focus {
 .modal-dialog StEntry:focus,
 .modal-dialog StEntry:active,
 .modal-dialog StEntry:pressed,
+.menu-search-box StEntry:focus,
+.menu-search-box StEntry:active,
+.menu-search-box StEntry:pressed,
 #notification StEntry:focus,
 #notification StEntry:active,
 #notification StEntry:pressed {
@@ -112,6 +116,7 @@ StScrollBar StButton#hhandle:focus {
 
 .popup-menu StEntry StIcon,
 .modal-dialog StEntry StIcon,
+.menu-search-box StEntry StIcon,
 #notification StEntry StIcon {
     color: #888;
 }
@@ -122,6 +127,9 @@ StScrollBar StButton#hhandle:focus {
 .modal-dialog StEntry:focus > StIcon,
 .modal-dialog StEntry:active > StIcon,
 .modal-dialog StEntry:pressed > StIcon,
+.menu-search-box StEntry:focus > StIcon,
+.menu-search-box StEntry:active > StIcon,
+.menu-search-box StEntry:pressed > StIcon,
 #notification StEntry:focus > StIcon,
 #notification StEntry:active > StIcon,
 #notification StEntry:pressed > StIcon {
@@ -1853,6 +1861,10 @@ StScrollBar StButton#hhandle:focus {
 /* Menu search box */
 .menu-search-box {
     padding-left: 30px;
+}
+
+.menu-search-box StIcon {
+    icon-size: 16px;
 }
 
 /* Right-click menu */

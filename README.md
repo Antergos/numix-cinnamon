@@ -1,4 +1,4 @@
-###Numix for cinnamon
+## This repo is no longer active. The theme is now maintained as part of [Numix Frost](https://github.com/Antergos/Numix-Frost).
 
 ---
 
